@@ -63,10 +63,10 @@ html {
 }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Open Sans', system-ui, sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--gray-300);
   background:
     radial-gradient(900px 500px at 50% -8%, rgba(231, 236, 245, .06), transparent 60%),
@@ -114,15 +114,16 @@ ol {
 h1,
 h2,
 h3 {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: var(--gray-100);
+  font-weight: 700;
 }
 
 h2 {
-  font-size: clamp(30px, 4.2vw, 50px);
-  font-weight: 800;
-  letter-spacing: -.03em;
-  line-height: 1.08;
+  font-size: clamp(32px, 4.5vw, 56px);
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.12;
 }
 
 .grad-text {
@@ -135,12 +136,12 @@ h2 {
 .eyebrow {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: .24em;
+  letter-spacing: .28em;
   color: var(--ice-400);
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 /* ============================================
@@ -161,25 +162,26 @@ button:focus-visible {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 15px;
-  font-weight: 500;
-  padding: 15px 30px;
+  font-weight: 600;
+  padding: 16px 32px;
   border-radius: 999px;
   text-decoration: none;
   cursor: pointer;
   border: 0;
-  transition: transform .18s ease, background-color .18s ease, border-color .18s ease;
+  transition: transform .2s ease, background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
 
 .btn-primary {
   background: var(--white);
   color: var(--ink-950);
-  box-shadow: var(--sh-1);
+  box-shadow: 0 8px 24px -8px rgba(0, 0, 0, .4);
 }
 
 .btn-primary:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, .5);
 }
 
 .btn-primary .arrow {
@@ -197,8 +199,9 @@ button:focus-visible {
 }
 
 .btn-ghost:hover {
-  border-color: var(--gray-500);
-  transform: translateY(-1px);
+  border-color: var(--ice-400);
+  color: var(--ice-400);
+  transform: translateY(-2px);
 }
 
 /* ============================================
@@ -363,7 +366,7 @@ header {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 130px 0 180px;
+  padding: 140px 0 200px;
   text-align: center;
 }
 
@@ -392,11 +395,13 @@ header {
 }
 
 .hero h1 {
-  font-size: clamp(46px, 8.2vw, 96px);
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(48px, 7.2vw, 96px);
   font-weight: 800;
-  letter-spacing: -.035em;
-  line-height: 1.02;
-  margin-bottom: 28px;
+  text-transform: capitalize;
+  letter-spacing: -.015em;
+  line-height: 1.1;
+  margin-bottom: 32px;
 }
 
 .hero h1 .l1 {
@@ -552,7 +557,7 @@ header {
    SECTIONS (general)
    ============================================ */
 section {
-  padding: 110px 0;
+  padding: 120px 0;
 }
 
 /* ============================================
@@ -567,12 +572,13 @@ section {
 }
 
 .statement p {
-  margin-top: 24px;
+  margin-top: 28px;
   font-size: 17px;
-  font-weight: 300;
+  font-weight: 400;
   max-width: 56ch;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.7;
 }
 
 /* ============================================
@@ -607,15 +613,16 @@ section {
 .svc {
   background: linear-gradient(180deg, rgba(22, 35, 63, .5), rgba(16, 27, 51, .5));
   border: 1px solid var(--line-1);
-  border-radius: 20px;
-  padding: 28px;
+  border-radius: 24px;
+  padding: 32px;
   box-shadow: var(--sh-2);
-  transition: border-color .2s ease, transform .2s ease;
+  transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease;
 }
 
 .svc:hover {
-  border-color: var(--navy-600);
-  transform: translateY(-2px);
+  border-color: var(--ice-400);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -10px rgba(143, 180, 220, .15);
 }
 
 .svc svg {
@@ -701,16 +708,17 @@ section {
   display: flex;
   gap: 20px;
   align-items: flex-start;
-  padding: 22px 24px;
+  padding: 24px 28px;
   border: 1px solid var(--line-1);
-  border-radius: 18px;
+  border-radius: 20px;
   background: rgba(16, 27, 51, .35);
-  transition: border-color .2s ease, transform .2s ease;
+  transition: border-color .25s ease, transform .25s ease, background .25s ease;
 }
 
 .diff:hover {
-  border-color: var(--navy-600);
-  transform: translateY(-1px);
+  border-color: var(--ice-400);
+  transform: translateY(-2px);
+  background: rgba(16, 27, 51, .5);
 }
 
 .diff svg {
@@ -747,7 +755,7 @@ section {
 }
 
 .process h2 {
-  margin-bottom: 64px;
+  margin-bottom: 72px;
 }
 
 .timeline {
@@ -825,7 +833,7 @@ section {
    CTA FINAL
    ============================================ */
 .cta-final {
-  padding: 110px 24px 130px;
+  padding: 120px 24px 140px;
 }
 
 .cta-card {
@@ -836,9 +844,10 @@ section {
   background: linear-gradient(180deg, rgba(22, 35, 63, .6), rgba(12, 20, 36, .6));
   border: 1px solid var(--line-1);
   border-radius: 32px;
-  box-shadow: var(--sh-2);
-  padding: 80px 32px;
+  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, .4);
+  padding: 88px 40px;
   text-align: center;
+  transition: box-shadow .3s ease, border-color .3s ease;
 }
 
 .cta-card::before {
@@ -870,7 +879,7 @@ section {
 
 @media (min-width: 768px) {
   .cta-card {
-    padding: 96px 80px;
+    padding: 104px 96px;
   }
 }
 
@@ -879,7 +888,7 @@ section {
    ============================================ */
 footer {
   border-top: 1px solid var(--line-1);
-  padding: 64px 0 40px;
+  padding: 80px 0 48px;
 }
 
 .foot-grid {
@@ -1020,4 +1029,390 @@ footer {
   .routes .flow {
     animation: none !important;
   }
+}
+
+/* ============================================
+   HERO BADGES (destaques abaixo dos CTAs)
+   ============================================ */
+.hero-badges {
+  display: flex;
+  gap: 10px 28px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.hero-badge {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.hero-badge svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--ice-400);
+  flex-shrink: 0;
+}
+
+.hero-badge b {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-300);
+  line-height: 1;
+}
+
+.hero-badge span {
+  display: none;
+}
+
+/* ============================================
+   ÁREAS DE ATUAÇÃO (abas horizontais + painel)
+   ============================================ */
+.areas {
+  border: 1px solid var(--line-1);
+  border-radius: 24px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(22, 35, 63, .45), rgba(16, 27, 51, .45));
+  box-shadow: var(--sh-2);
+}
+
+/* faixa de abas (estilo tira de logos) */
+.areas-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--line-1);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.areas-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.area-tab {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 22px 28px;
+  background: transparent;
+  border: 0;
+  border-right: 1px solid var(--line-1);
+  cursor: pointer;
+  white-space: nowrap;
+  color: var(--gray-500);
+  transition: color .25s ease, background-color .25s ease;
+  position: relative;
+}
+
+.area-tab:last-child {
+  border-right: 0;
+}
+
+.area-tab svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  flex-shrink: 0;
+}
+
+.area-tab__num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--gray-700);
+  transition: color .2s ease;
+}
+
+.area-tab__name {
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -.01em;
+}
+
+.area-tab:hover {
+  color: var(--gray-300);
+  background: rgba(231, 236, 245, .02);
+}
+
+.area-tab.is-active {
+  color: var(--white);
+  background: rgba(198, 169, 113, .06);
+}
+
+.area-tab.is-active .area-tab__num {
+  color: var(--gold);
+}
+
+.area-tab.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--gold);
+}
+
+/* painel de conteúdo */
+.area-panel {
+  display: grid;
+  gap: 40px;
+  padding: 48px;
+  grid-template-columns: 1fr;
+  animation: area-fade .35s ease;
+}
+
+.area-panel[hidden] {
+  display: none;
+}
+
+@media (min-width: 820px) {
+  .area-panel {
+    grid-template-columns: minmax(240px, 320px) 1fr;
+    gap: 48px;
+    padding: 48px;
+  }
+}
+
+@keyframes area-fade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+.area-panel__intro h3 {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -.015em;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.area-panel__intro p {
+  font-size: 15px;
+  color: var(--gray-500);
+  line-height: 1.55;
+}
+
+.area-panel__list {
+  list-style: none;
+  display: grid;
+  gap: 0;
+  align-content: start;
+}
+
+@media (min-width: 560px) {
+  .area-panel__list {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
+  }
+}
+
+.area-panel__list li {
+  font-size: 14.5px;
+  color: var(--gray-300);
+  padding: 12px 0 12px 20px;
+  position: relative;
+  border-bottom: 1px solid var(--line-1);
+}
+
+.area-panel__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 9px;
+  height: 1px;
+  background: var(--gold);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .area-panel {
+    animation: none;
+  }
+}
+
+/* ============================================
+   PAINEL VISUAL (Diferenciais)
+   ============================================ */
+.visual-panel {
+  position: relative;
+  margin-top: 36px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--line-1);
+  box-shadow: var(--sh-2);
+  background: linear-gradient(160deg, #101B33, #0C1424);
+  max-width: 480px;
+}
+
+.visual-panel img,
+.visual-panel > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.vp-badge {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(9, 16, 31, .85);
+  border: 1px solid var(--line-2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray-100);
+  margin: 0;
+}
+
+.vp-badge svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--ice-400);
+  flex-shrink: 0;
+}
+
+.vp-b1 {
+  top: 16px;
+  right: 16px;
+}
+
+.vp-b2 {
+  bottom: 16px;
+  left: 16px;
+}
+
+/* ============================================
+   SPLIT (texto + foto grande — Quem Somos)
+   ============================================ */
+.split-grid {
+  display: grid;
+  gap: 48px;
+  align-items: center;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+  .split-grid {
+    grid-template-columns: 1.05fr .95fr;
+    gap: 64px;
+  }
+}
+
+.statement .split-grid {
+  text-align: left;
+  max-width: 1120px;
+}
+
+.statement .split-grid p {
+  margin-left: 0;
+  max-width: 52ch;
+}
+
+.photo-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--line-1);
+  box-shadow: var(--sh-2);
+  margin: 0;
+}
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+.photo-card .vp-badge {
+  position: absolute;
+}
+
+/* ============================================
+   SVC MEDIA (imagens/mockups dentro dos cards)
+   ============================================ */
+.svc {
+  display: flex;
+  flex-direction: column;
+}
+
+.svc > p {
+  margin-bottom: 20px;
+}
+
+.svc-media {
+  margin-top: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line-1);
+  background: linear-gradient(160deg, #101B33, #0C1424);
+}
+
+.svc-media img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.svc-media svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ============================================
+   RITMO E ALINHAMENTO DE SEÇÕES
+   ============================================ */
+.sec-head {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 64px;
+}
+
+.sec-head h2 {
+  margin-bottom: 16px;
+}
+
+.sec-sub {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--gray-500);
+}
+
+.sec-cta {
+  text-align: center;
+  margin-top: 44px;
+}
+
+/* Diferenciais: foto e lista lado a lado, mesma altura */
+.diff-grid {
+  align-items: stretch;
+  gap: 14px;
+}
+
+.visual-panel {
+  margin-top: 0;
+  max-width: none;
+  height: 100%;
+  min-height: 300px;
+}
+
+.visual-panel img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.process h2 {
+  margin-bottom: 14px;
 }

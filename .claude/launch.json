@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "lp-davi",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["-c", "python3 -m http.server \"${PORT:-8931}\" -d \"/Users/hayden/lp nova\""],
+      "autoPort": true,
+      "port": 8931
+    }
+  ]
+}
