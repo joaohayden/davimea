@@ -685,10 +685,10 @@ footer { background-color: var(--ink-950) !important; }
   stroke: var(--safra-navy) !important;
 }
 
-/* Outlined, Square Components on Light Backgrounds */
-.bg-light .areas, .bg-light .svc, .bg-light .diff, .bg-light .step {
-  background: var(--white) !important;
-  border: 1px solid var(--gray-200) !important;
+/* Outlined, Square Components on Light Backgrounds (Azulzinho Cards) */
+.bg-light .areas, .bg-light .svc, .bg-light .diff, .bg-light .tl-step {
+  background: #F2F5FA !important; /* Azulzinho */
+  border: 1px solid #D2DCE6 !important;
   border-radius: 4px !important;
   box-shadow: none !important;
   position: relative;
@@ -696,32 +696,32 @@ footer { background-color: var(--ink-950) !important; }
   transition: transform 0.3s ease, box-shadow 0.3s ease !important;
 }
 
-.bg-light .svc:hover, .bg-light .diff:hover, .bg-light .step:hover {
+.bg-light .svc:hover, .bg-light .diff:hover, .bg-light .tl-step:hover {
   transform: translateY(-4px) !important;
   box-shadow: 0 10px 30px rgba(15, 38, 74, 0.05) !important;
 }
 
-.bg-light .areas h3, .bg-light .svc h3, .bg-light .diff h3, .bg-light .step h3,
+.bg-light .areas h3, .bg-light .svc h3, .bg-light .diff h3, .bg-light .tl-step h3,
 .bg-light .areas .area-tab, .bg-light .areas .area-tab__name, .bg-light .areas h4 {
   color: var(--safra-navy) !important;
 }
 
 .bg-light .areas p, .bg-light .areas span, .bg-light .areas li,
-.bg-light .svc p, .bg-light .diff p, .bg-light .step p {
-  color: var(--gray-600) !important;
+.bg-light .svc p, .bg-light .diff p, .bg-light .tl-step p {
+  color: var(--gray-700) !important;
 }
 
-.bg-light .areas svg, .bg-light .svc svg, .bg-light .diff svg, .bg-light .step svg {
+.bg-light .areas svg, .bg-light .svc svg, .bg-light .diff svg, .bg-light .tl-step svg {
   stroke: var(--safra-navy) !important;
 }
 
 /* Tab container overrides inside Light Backgrounds */
 .bg-light .areas-tabs {
-  border-bottom: 1px solid var(--gray-200) !important;
+  border-bottom: 1px solid #D2DCE6 !important;
 }
 
 .bg-light .area-tab {
-  border-right: 1px solid var(--gray-200) !important;
+  border-right: 1px solid #D2DCE6 !important;
   color: var(--gray-500) !important;
 }
 
@@ -735,12 +735,12 @@ footer { background-color: var(--ink-950) !important; }
   background: rgba(15, 38, 74, 0.04) !important;
 }
 
-/* Border Drawing Animation */
-.bg-light .svc::after, .bg-light .diff::after, .bg-light .step::after {
+/* Border Drawing Animation on Light backgrounds */
+.bg-light .svc::after, .bg-light .diff::after, .bg-light .tl-step::after {
   content: "";
   position: absolute;
   inset: -1px;
-  border: 1.5px solid var(--safra-royal);
+  border: 1.5px solid var(--safra-navy);
   border-radius: 4px;
   z-index: 5;
   pointer-events: none;
@@ -748,7 +748,7 @@ footer { background-color: var(--ink-950) !important; }
   transition: clip-path 0.5s ease-in-out;
 }
 
-.bg-light .svc:hover::after, .bg-light .diff:hover::after, .bg-light .step:hover::after {
+.bg-light .svc:hover::after, .bg-light .diff:hover::after, .bg-light .tl-step:hover::after {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
@@ -797,50 +797,33 @@ footer { background-color: var(--ink-950) !important; }
 }
 
 .svc-grid {
-  display: grid;
-  gap: 14px;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
 }
 
 .svc {
   position: relative;
-  overflow: hidden;
-  background: linear-gradient(180deg, rgba(22, 28, 45, 0.7), rgba(12, 16, 28, 0.7));
-  border: 1px solid rgba(215, 195, 155, 0.25);
-  border-radius: 24px;
+  overflow: visible !important;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 4px;
   padding: 32px;
-  box-shadow: inset 0 1px 0 rgba(215, 195, 155, 0.15), 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  flex: 1 1 100%;
+  max-width: 100%;
   transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease;
 }
 
-.svc::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--gold) 0%, var(--ice-400) 100%);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 1.2s var(--ease-out-expo);
-  transition-delay: inherit;
-}
-
-.svc.in::before {
-  transform: scaleX(1);
-}
-
-.svc:hover {
-  border-color: rgba(215, 195, 155, 0.6);
+..svc:hover {
   transform: translateY(-4px);
-  box-shadow: inset 0 1px 0 rgba(215, 195, 155, 0.25), 0 20px 40px -10px rgba(215, 195, 155, 0.15);
+  box-shadow: 0 10px 30px rgba(15, 38, 74, 0.05);
 }
 
 .svc svg {
   width: 30px;
   height: 30px;
-  stroke: rgba(215, 195, 155, 0.9);
+  stroke: var(--safra-navy);
   margin-bottom: 22px;
 }
 
@@ -848,14 +831,31 @@ footer { background-color: var(--ink-950) !important; }
   font-size: 17px;
   font-weight: 700;
   letter-spacing: -.01em;
-  color: var(--white);
+  color: var(--safra-navy);
   margin-bottom: 8px;
 }
 
 .svc p {
   font-size: 14px;
-  color: var(--gray-500);
+  color: var(--gray-700);
   line-height: 1.55;
+}
+
+/* Border Drawing Animation on dark layout */
+.svc::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border: 1.5px solid var(--gold);
+  border-radius: 4px;
+  z-index: 5;
+  pointer-events: none;
+  clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+  transition: clip-path 0.5s ease-in-out;
+}
+
+.svc:hover::after {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .chips {
@@ -884,14 +884,16 @@ footer { background-color: var(--ink-950) !important; }
 }
 
 @media (min-width: 640px) {
-  .svc-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .svc {
+    flex: 1 1 calc(50% - 16px);
+    max-width: calc(50% - 16px);
   }
 }
 
 @media (min-width: 960px) {
-  .svc-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .svc {
+    flex: 1 1 calc(33.333% - 16px);
+    max-width: calc(33.333% - 16px);
   }
 }
 
@@ -912,45 +914,26 @@ footer { background-color: var(--ink-950) !important; }
 
 .diff {
   position: relative;
-  overflow: hidden;
+  overflow: visible !important;
   display: flex;
   gap: 20px;
   align-items: flex-start;
   padding: 24px 28px;
-  border: 1px solid var(--line-1);
-  border-radius: 20px;
-  background: rgba(16, 27, 51, .35);
+  border: 1px solid var(--gray-200);
+  border-radius: 4px;
+  background: var(--white);
   transition: border-color .25s ease, transform .25s ease, background .25s ease;
 }
 
-.diff::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--gold) 0%, var(--ice-400) 100%);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 1.2s var(--ease-out-expo);
-  transition-delay: inherit;
-}
-
-.diff.in::before {
-  transform: scaleX(1);
-}
-
-.diff:hover {
-  border-color: var(--ice-400);
+..diff:hover {
   transform: translateY(-4px);
-  background: rgba(16, 27, 51, .5);
+  box-shadow: 0 10px 30px rgba(15, 38, 74, 0.05);
 }
 
 .diff svg {
   width: 20px;
   height: 20px;
-  stroke: var(--ice-400);
+  stroke: var(--safra-navy);
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -958,13 +941,30 @@ footer { background-color: var(--ink-950) !important; }
 .diff h3 {
   font-size: 16px;
   font-weight: 700;
-  color: var(--white);
+  color: var(--safra-navy);
   margin-bottom: 4px;
 }
 
 .diff p {
   font-size: 14px;
-  color: var(--gray-500);
+  color: var(--gray-700);
+}
+
+/* Border Drawing Animation on dark layout for diff */
+.diff::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border: 1.5px solid var(--gold);
+  border-radius: 4px;
+  z-index: 5;
+  pointer-events: none;
+  clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+  transition: clip-path 0.5s ease-in-out;
+}
+
+.diff:hover::after {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 @media (min-width: 900px) {
@@ -999,35 +999,32 @@ footer { background-color: var(--ink-950) !important; }
 
 .tl-step {
   position: relative;
-  background: linear-gradient(135deg, rgba(22, 35, 63, 0.35) 0%, rgba(9, 16, 31, 0.15) 100%);
-  border: 1px solid rgba(231, 236, 245, 0.05);
-  border-radius: 16px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 4px;
   padding: 44px 32px 36px;
-  overflow: hidden;
+  overflow: visible !important;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   transition: opacity .8s var(--ease-out-expo), transform .8s var(--ease-out-expo);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
-/* Subtle top border animates (scaleX) on reveal */
-.tl-step::before {
+/* Border Drawing Animation on dark layout for tl-step */
+.tl-step::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--gold) 0%, var(--ice-400) 100%);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 1.2s var(--ease-out-expo);
-  transition-delay: inherit;
+  inset: -1px;
+  border: 1.5px solid var(--gold);
+  border-radius: 4px;
+  z-index: 5;
+  pointer-events: none;
+  clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+  transition: clip-path 0.5s ease-in-out;
 }
 
-.tl-step.in::before {
-  transform: scaleX(1);
+.tl-step:hover::after {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 /* Giant watermark step number in the background */
@@ -1036,7 +1033,7 @@ footer { background-color: var(--ink-950) !important; }
   font-weight: 800;
   font-size: 72px;
   line-height: 1;
-  color: rgba(231, 236, 245, 0.015);
+  color: rgba(1, 17, 43, 0.05);
   position: absolute;
   top: 15px;
   right: 24px;
@@ -1047,11 +1044,11 @@ footer { background-color: var(--ink-950) !important; }
 }
 
 .tl-step.in .dot {
-  color: rgba(143, 180, 220, 0.06);
+  color: rgba(1, 17, 43, 0.05);
 }
 
 .tl-step:hover .dot {
-  color: rgba(198, 169, 113, 0.12);
+  color: rgba(198, 169, 113, 0.15);
   transform: scale(1.08) translateY(-4px);
 }
 
@@ -1059,7 +1056,7 @@ footer { background-color: var(--ink-950) !important; }
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 600;
-  color: var(--white);
+  color: var(--safra-navy);
   margin-top: 12px;
   margin-bottom: 12px;
   line-height: 1.3;
@@ -1068,7 +1065,7 @@ footer { background-color: var(--ink-950) !important; }
 .tl-step p {
   font-size: 13.5px;
   line-height: 1.6;
-  color: var(--gray-300);
+  color: var(--gray-700);
   margin: 0;
   max-width: 100%;
 }

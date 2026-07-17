@@ -132,7 +132,7 @@
           navLinks.forEach(function (link) {
             link.style.color = '';
             if (link.getAttribute('href') === '#' + id) {
-              link.style.color = 'var(--white)';
+              link.style.color = 'var(--safra-navy)';
             }
           });
         }
