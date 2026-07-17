@@ -685,24 +685,71 @@ footer { background-color: var(--ink-950) !important; }
   stroke: var(--safra-navy) !important;
 }
 
-/* Solid Navy Components on Light Backgrounds */
+/* Outlined, Square Components on Light Backgrounds */
 .bg-light .areas, .bg-light .svc, .bg-light .diff, .bg-light .step {
-  background-color: var(--safra-navy) !important;
-  border-color: rgba(255, 255, 255, 0.05) !important;
+  background: var(--white) !important;
+  border: 1px solid var(--gray-200) !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  position: relative;
+  overflow: visible !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.bg-light .svc:hover, .bg-light .diff:hover, .bg-light .step:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 10px 30px rgba(15, 38, 74, 0.05) !important;
 }
 
 .bg-light .areas h3, .bg-light .svc h3, .bg-light .diff h3, .bg-light .step h3,
 .bg-light .areas .area-tab, .bg-light .areas .area-tab__name, .bg-light .areas h4 {
-  color: var(--white) !important;
+  color: var(--safra-navy) !important;
 }
 
 .bg-light .areas p, .bg-light .areas span, .bg-light .areas li,
 .bg-light .svc p, .bg-light .diff p, .bg-light .step p {
-  color: var(--gray-300) !important;
+  color: var(--gray-600) !important;
 }
 
 .bg-light .areas svg, .bg-light .svc svg, .bg-light .diff svg, .bg-light .step svg {
-  stroke: var(--ice-400) !important;
+  stroke: var(--safra-navy) !important;
+}
+
+/* Tab container overrides inside Light Backgrounds */
+.bg-light .areas-tabs {
+  border-bottom: 1px solid var(--gray-200) !important;
+}
+
+.bg-light .area-tab {
+  border-right: 1px solid var(--gray-200) !important;
+  color: var(--gray-500) !important;
+}
+
+.bg-light .area-tab:hover {
+  color: var(--safra-navy) !important;
+  background: rgba(15, 38, 74, 0.02) !important;
+}
+
+.bg-light .area-tab.is-active {
+  color: var(--safra-navy) !important;
+  background: rgba(15, 38, 74, 0.04) !important;
+}
+
+/* Border Drawing Animation */
+.bg-light .svc::after, .bg-light .diff::after, .bg-light .step::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border: 1.5px solid var(--safra-royal);
+  border-radius: 4px;
+  z-index: 5;
+  pointer-events: none;
+  clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+  transition: clip-path 0.5s ease-in-out;
+}
+
+.bg-light .svc:hover::after, .bg-light .diff:hover::after, .bg-light .step:hover::after {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 /* ============================================
@@ -1042,33 +1089,38 @@ footer { background-color: var(--ink-950) !important; }
 
 .cta-card {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   max-width: 1120px;
   margin: 0 auto;
-  background: linear-gradient(180deg, rgba(22, 35, 63, .6), rgba(12, 20, 36, .6));
-  border: 1px solid var(--line-1);
-  border-radius: 32px;
-  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, .4);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
   padding: clamp(56px, 8vw, 88px) clamp(24px, 4vw, 64px);
   text-align: center;
-  transition: box-shadow .3s ease, border-color .3s ease;
+  transition: border-color .3s ease;
 }
 
-.cta-card::before {
+.cta-card::after {
   content: "";
   position: absolute;
-  inset: 0;
-  background: radial-gradient(480px 280px at 50% 0%, rgba(255, 255, 255, .09), transparent 70%);
+  inset: -1px;
+  border: 1.5px solid var(--gold);
+  border-radius: 4px;
+  z-index: 5;
   pointer-events: none;
+  clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+  transition: clip-path 0.5s ease-in-out;
 }
 
-.cta-card>* {
-  position: relative;
+.cta-card:hover::after {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .cta-card h2 {
   max-width: 22ch;
   margin: 0 auto 18px;
+  color: var(--white);
+  text-transform: uppercase;
 }
 
 .cta-card .sub {
@@ -1079,6 +1131,7 @@ footer { background-color: var(--ink-950) !important; }
 
 .cta-card .hero-support {
   margin-top: 20px;
+  color: var(--gray-400);
 }
 
 @media (min-width: 768px) {
