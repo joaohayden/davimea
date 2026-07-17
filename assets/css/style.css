@@ -7,6 +7,11 @@
   --ink-900: #09101F;
   --ink-850: #0C1424;
 
+  /* Safra Palette (Premium Navy Blues) */
+  --safra-navy: #0F264A;
+  --safra-steel: #15305B;
+  --safra-royal: #1A3B6E;
+
   /* Navy (elevated surfaces) */
   --navy-800: #101B33;
   --navy-700: #16233F;
@@ -71,12 +76,7 @@ body {
   font-size: 16px;
   line-height: 1.65;
   color: var(--gray-300);
-  background:
-    radial-gradient(900px 500px at 50% -8%, rgba(231, 236, 245, .06), transparent 60%),
-    radial-gradient(1100px 900px at 88% 8%, rgba(30, 47, 78, .35), transparent 55%),
-    linear-gradient(180deg, #09101F 0%, #0C1424 50%, #060A14 100%);
-  background-attachment: fixed;
-  background-color: var(--ink-950);
+  background-color: var(--safra-navy);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -220,24 +220,8 @@ header {
   left: 0;
   right: 0;
   z-index: 50;
-  background: transparent;
-}
-
-header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 180px;
-  background: linear-gradient(180deg,
-    rgba(9, 16, 31, 0.95) 0%,
-    rgba(9, 16, 31, 0.75) 35%,
-    rgba(9, 16, 31, 0.4) 65%,
-    rgba(9, 16, 31, 0) 100%
-  );
-  z-index: -1;
-  pointer-events: none;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--gray-100);
 }
 
 .nav {
@@ -255,7 +239,7 @@ header::before {
   font-size: 16px;
   letter-spacing: .08em;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--safra-navy);
   text-decoration: none;
 }
 
@@ -266,7 +250,7 @@ header::before {
 }
 
 .nav-links a {
-  color: var(--gray-300);
+  color: var(--gray-700);
   text-decoration: none;
   font-size: 14px;
   transition: color .18s ease;
@@ -287,7 +271,7 @@ header::before {
 }
 
 .nav-links a:hover {
-  color: var(--white);
+  color: var(--safra-navy);
 }
 
 .nav-links a:hover::after {
@@ -297,6 +281,15 @@ header::before {
 .nav .btn {
   padding: 10px 22px;
   font-size: 14px;
+}
+
+.nav .btn-primary {
+  background: var(--safra-navy);
+  color: var(--white);
+}
+
+.nav .btn-primary:hover {
+  background: var(--safra-steel);
 }
 
 /* Hamburger */
@@ -315,7 +308,7 @@ header::before {
   display: block;
   width: 22px;
   height: 2px;
-  background: var(--gray-100);
+  background: var(--safra-navy);
   border-radius: 2px;
   transition: all .3s ease;
   transform-origin: center;
@@ -668,6 +661,48 @@ header::before {
    ============================================ */
 section {
   padding: clamp(56px, 6.5vw, 112px) 0;
+}
+
+/* Safra Section Breakdown (Zebrado) */
+#atuacao, #diferenciais { background-color: var(--safra-navy) !important; }
+footer { background-color: var(--ink-950) !important; }
+
+/* Light Background Utility */
+.bg-light {
+  background-color: var(--white) !important;
+  color: var(--safra-navy) !important;
+}
+
+.bg-light h1, .bg-light h2, .bg-light h3, .bg-light h4, .bg-light .eyebrow {
+  color: var(--safra-navy) !important;
+}
+
+.bg-light p, .bg-light span, .bg-light li, .bg-light .sec-sub {
+  color: var(--gray-700) !important;
+}
+
+.bg-light svg {
+  stroke: var(--safra-navy) !important;
+}
+
+/* Solid Navy Components on Light Backgrounds */
+.bg-light .areas, .bg-light .svc, .bg-light .diff, .bg-light .step {
+  background-color: var(--safra-navy) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.bg-light .areas h3, .bg-light .svc h3, .bg-light .diff h3, .bg-light .step h3,
+.bg-light .areas .area-tab, .bg-light .areas .area-tab__name, .bg-light .areas h4 {
+  color: var(--white) !important;
+}
+
+.bg-light .areas p, .bg-light .areas span, .bg-light .areas li,
+.bg-light .svc p, .bg-light .diff p, .bg-light .step p {
+  color: var(--gray-300) !important;
+}
+
+.bg-light .areas svg, .bg-light .svc svg, .bg-light .diff svg, .bg-light .step svg {
+  stroke: var(--ice-400) !important;
 }
 
 /* ============================================
@@ -1549,6 +1584,7 @@ footer {
 
 .sec-head h2 {
   margin-bottom: 16px;
+  text-transform: uppercase;
 }
 
 .sec-sub {
