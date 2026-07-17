@@ -172,11 +172,11 @@ button:focus-visible {
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   font-weight: 600;
-  padding: 16px 32px;
-  border-radius: 999px;
+  padding: 15px 30px;
+  border-radius: 4px;
   text-decoration: none;
   cursor: pointer;
-  border: 0;
+  border: 2px solid transparent;
   transition: transform .2s ease, background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
 
@@ -202,13 +202,36 @@ button:focus-visible {
 .btn-ghost {
   background: transparent;
   color: var(--gray-100);
-  border: 1px solid var(--line-2);
+  border: 2px solid rgba(255, 255, 255, 0.25);
 }
 
 .btn-ghost:hover {
-  border-color: var(--ice-400);
-  color: var(--ice-400);
+  border-color: var(--white);
+  color: var(--white);
   transform: translateY(-2px);
+}
+
+/* Primary Button on light backgrounds should be navy */
+.bg-light .btn-primary {
+  background: var(--safra-navy) !important;
+  color: var(--white) !important;
+  border-color: var(--safra-navy) !important;
+}
+
+.bg-light .btn-primary:hover {
+  background: var(--safra-steel) !important;
+  border-color: var(--safra-steel) !important;
+}
+
+/* Ghost Button on light backgrounds should be navy */
+.bg-light .btn-ghost {
+  color: var(--safra-navy) !important;
+  border: 2px solid var(--safra-navy) !important;
+}
+
+.bg-light .btn-ghost:hover {
+  color: var(--safra-steel) !important;
+  border-color: var(--safra-steel) !important;
 }
 
 /* ============================================
@@ -1366,17 +1389,19 @@ footer {
    ÁREAS DE ATUAÇÃO (abas horizontais + painel)
    ============================================ */
 .areas {
-  border: 1px solid var(--line-1);
-  border-radius: 24px;
-  overflow: hidden;
-  background: linear-gradient(180deg, rgba(22, 35, 63, .45), rgba(16, 27, 51, .45));
-  box-shadow: var(--sh-2);
+  position: relative;
+  overflow: visible !important;
+  background: var(--white) !important;
+  border: 1px solid var(--gray-200) !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* faixa de abas (estilo tira de logos) */
 .areas-tabs {
   display: flex;
-  border-bottom: 1px solid var(--line-1);
+  border-bottom: 1px solid var(--gray-200);
   overflow-x: auto;
   scrollbar-width: none;
 }
@@ -1394,10 +1419,10 @@ footer {
   padding: 22px 28px;
   background: transparent;
   border: 0;
-  border-right: 1px solid var(--line-1);
+  border-right: 1px solid var(--gray-200);
   cursor: pointer;
   white-space: nowrap;
-  color: var(--gray-500);
+  color: var(--gray-600);
   transition: color .25s ease, background-color .25s ease;
   position: relative;
 }
@@ -1422,13 +1447,13 @@ footer {
 }
 
 .area-tab:hover {
-  color: var(--gray-300);
-  background: rgba(231, 236, 245, .02);
+  color: var(--safra-navy);
+  background: rgba(1, 17, 43, 0.02);
 }
 
 .area-tab.is-active {
-  color: var(--white);
-  background: rgba(198, 169, 113, .06);
+  color: var(--safra-navy);
+  background: rgba(1, 17, 43, .04);
 }
 
 .area-tab.is-active::after {
@@ -1473,13 +1498,13 @@ footer {
   font-size: 22px;
   font-weight: 700;
   letter-spacing: -.015em;
-  color: var(--white);
+  color: var(--safra-navy);
   margin-bottom: 12px;
 }
 
 .area-panel__intro p {
   font-size: 15px;
-  color: var(--gray-500);
+  color: var(--gray-700);
   line-height: 1.55;
 }
 
@@ -1499,10 +1524,10 @@ footer {
 
 .area-panel__list li {
   font-size: 14.5px;
-  color: var(--gray-300);
+  color: var(--gray-700);
   padding: 12px 0 12px 20px;
   position: relative;
-  border-bottom: 1px solid var(--line-1);
+  border-bottom: 1px solid var(--gray-200);
 }
 
 .area-panel__list li::before {
