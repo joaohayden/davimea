@@ -328,6 +328,31 @@
     });
   }
 
+  /* ── Floating WhatsApp Tooltip ── */
+  function initWhatsAppTooltip() {
+    var tooltip = document.getElementById('whatsappTooltip');
+    var closeBtn = document.getElementById('closeTooltip');
+    if (!tooltip) return;
+
+    // Show tooltip after 10 seconds
+    var timer = setTimeout(function () {
+      tooltip.classList.add('show');
+    }, 10000);
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        tooltip.classList.remove('show');
+        clearTimeout(timer);
+      });
+    }
+
+    tooltip.addEventListener('click', function () {
+      window.open('https://wa.me/5592984622007?text=Ol%C3%A1,%20vim%20da%20landing%20page%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20intermedia%C3%A7%C3%A3o%20de%20neg%C3%B3cios.', '_blank');
+    });
+  }
+
   /* ── Init ── */
   document.addEventListener('DOMContentLoaded', function () {
     initReveal();
@@ -337,6 +362,7 @@
     initActiveNav();
     initHeroVideo();
     initAreaTabs();
+    initWhatsAppTooltip();
   });
 
 })();
