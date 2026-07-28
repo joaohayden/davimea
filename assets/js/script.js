@@ -175,10 +175,20 @@
 
   /* ── Áreas de Atuação: abas ── */
   function initAreaTabs() {
-    var tablist = document.querySelector('.areas-tabs');
+    var areasContainer = document.querySelector('.areas');
+    if (!areasContainer) return;
+    var tablist = areasContainer.querySelector('.areas-tabs');
     if (!tablist) return;
 
     var tabs = Array.prototype.slice.call(tablist.querySelectorAll('[role="tab"]'));
+    var progressBar = areasContainer.querySelector('.areas-progress-bar');
+    
+    var duration = 10000; // 10 segundos
+    var startTime = null;
+    var animationFrameId = null;
+    var isPaused = false;
+    var isOffScreen = false;
+    var elapsedAtPause = 0;
 
     function activate(tab, setFocus) {
       tabs.forEach(function (t) {
@@ -193,7 +203,114 @@
         }
       });
       if (setFocus) tab.focus();
+      
+      resetTimer();
     }
+
+    function tick(timestamp) {
+      if (isPaused || isOffScreen) {
+        startTime = null;
+        animationFrameId = requestAnimationFrame(tick);
+        return;
+      }
+
+      if (!startTime) startTime = timestamp;
+      var elapsed = (timestamp - startTime) + elapsedAtPause;
+
+      if (elapsed >= duration) {
+        var activeIdx = tabs.findIndex(function (t) {
+          return t.classList.contains('is-active');
+        });
+        var nextIdx = (activeIdx + 1) % tabs.length;
+        activate(tabs[nextIdx]);
+        return;
+      }
+
+      if (progressBar) {
+        var pct = (elapsed / duration) * 100;
+        progressBar.style.width = pct + '%';
+      }
+
+      animationFrameId = requestAnimationFrame(tick);
+    }
+
+    function startTimer() {
+      if (!animationFrameId) {
+        startTime = null;
+        elapsedAtPause = 0;
+        animationFrameId = requestAnimationFrame(tick);
+      }
+    }
+
+    function resetTimer() {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = null;
+      }
+      if (progressBar) {
+        progressBar.style.width = '0%';
+      }
+      startTime = null;
+      elapsedAtPause = 0;
+      isPaused = false;
+      startTimer();
+    }
+
+    function pauseTimer() {
+      if (!isPaused) {
+        isPaused = true;
+        if (startTime) {
+          elapsedAtPause += (performance.now() - startTime);
+        }
+        startTime = null;
+      }
+    }
+
+    function resumeTimer() {
+      if (isPaused) {
+        isPaused = false;
+        startTime = null;
+      }
+    }
+
+    // Pausar ao passar o mouse por cima
+    areasContainer.addEventListener('mouseenter', pauseTimer);
+    areasContainer.addEventListener('mouseleave', resumeTimer);
+
+    // Pausar quando fora do viewport
+    if ('IntersectionObserver' in window) {
+      var visibilityObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            if (isOffScreen) {
+              isOffScreen = false;
+              startTime = null;
+            }
+          } else {
+            if (!isOffScreen) {
+              isOffScreen = true;
+              if (startTime) {
+                elapsedAtPause += (performance.now() - startTime);
+              }
+              startTime = null;
+            }
+          }
+        });
+      }, { threshold: 0.05 });
+      visibilityObserver.observe(areasContainer);
+    }
+
+    // Pausar se a aba do navegador estiver oculta
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) {
+        pauseTimer();
+      } else {
+        resumeTimer();
+      }
+    });
+
+    // Iniciar temporizador
+    startTimer();
 
     tabs.forEach(function (tab, i) {
       tab.addEventListener('click', function () { activate(tab); });
