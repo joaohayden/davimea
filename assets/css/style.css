@@ -1198,6 +1198,7 @@ footer { background-color: #0A1D38 !important; }
 .diff-split__head h2 {
   font-size: clamp(18px, 2.2vw, 28px);
   margin-bottom: 8px;
+  text-transform: uppercase;
 }
 
 .diff-split__head .sec-sub {
@@ -1950,6 +1951,10 @@ footer {
   margin-left: 0 !important;
   margin-right: auto !important;
   text-align: left !important;
+}
+
+.statement-text h2 {
+  text-transform: uppercase;
 }
 
 .statement-text p {
