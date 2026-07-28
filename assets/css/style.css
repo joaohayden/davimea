@@ -863,20 +863,53 @@ footer { background-color: #0A1D38 !important; }
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
+  padding: 15px 20px;
+  position: relative;
+  overflow: hidden;
 }
 
 .logo-item img {
   max-width: 140px;
   max-height: 60px;
   object-fit: contain;
-  filter: grayscale(100%) opacity(0.6);
-  transition: filter 0.3s ease, transform 0.3s ease;
+  filter: grayscale(0%) opacity(0.85);
+  transition: filter 0.4s ease, transform 0.4s ease;
 }
 
 .logo-item:hover img {
-  filter: grayscale(0%) opacity(1);
-  transform: scale(1.05);
+  filter: grayscale(0%) opacity(1) brightness(1.06) contrast(1.02);
+  transform: scale(1.04);
+}
+
+/* Glossy/Waxed car shine sweep effect */
+.logo-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.75) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  pointer-events: none;
+}
+
+.logo-item:hover::after {
+  animation: shine-sweep 0.75s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+@keyframes shine-sweep {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
 }
 
 @keyframes scroll-logos {
