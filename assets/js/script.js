@@ -328,6 +328,31 @@
     });
   }
 
+  /* ── Floating WhatsApp Tooltip ── */
+  function initWhatsAppTooltip() {
+    var tooltip = document.getElementById('whatsappTooltip');
+    var closeBtn = document.getElementById('closeTooltip');
+    if (!tooltip) return;
+
+    // Show tooltip after 4 seconds
+    var timer = setTimeout(function () {
+      tooltip.classList.add('show');
+    }, 4000);
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        tooltip.classList.remove('show');
+        clearTimeout(timer);
+      });
+    }
+
+    tooltip.addEventListener('click', function () {
+      window.open('https://wa.me/5592984622007', '_blank');
+    });
+  }
+
   /* ── Init ── */
   document.addEventListener('DOMContentLoaded', function () {
     initReveal();
@@ -337,6 +362,7 @@
     initActiveNav();
     initHeroVideo();
     initAreaTabs();
+    initWhatsAppTooltip();
   });
 
 })();
