@@ -2388,7 +2388,16 @@ footer {
 .whatsapp-tooltip.show {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  animation: tooltip-bob 3s ease-in-out infinite;
+}
+
+@keyframes tooltip-bob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 .whatsapp-tooltip__close {

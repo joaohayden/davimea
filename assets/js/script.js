@@ -334,10 +334,10 @@
     var closeBtn = document.getElementById('closeTooltip');
     if (!tooltip) return;
 
-    // Show tooltip after 4 seconds
+    // Show tooltip after 10 seconds
     var timer = setTimeout(function () {
       tooltip.classList.add('show');
-    }, 4000);
+    }, 10000);
 
     if (closeBtn) {
       closeBtn.addEventListener('click', function (e) {
