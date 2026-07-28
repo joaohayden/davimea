@@ -709,7 +709,7 @@ footer { background-color: var(--ink-950) !important; }
 }
 
 /* Outlined, Square Components on Light Backgrounds (Azulzinho Cards) */
-.bg-light .areas, .bg-light .svc, .bg-light .diff, .bg-light .tl-step {
+.bg-light .areas, .bg-light .diff, .bg-light .tl-step {
   background: #F2F5FA !important; /* Azulzinho */
   border: 1px solid #D2DCE6 !important;
   border-radius: 4px !important;
@@ -719,23 +719,56 @@ footer { background-color: var(--ink-950) !important; }
   transition: transform 0.3s ease, box-shadow 0.3s ease !important;
 }
 
-.bg-light .svc:hover, .bg-light .diff:hover, .bg-light .tl-step:hover {
+.bg-light .diff:hover, .bg-light .tl-step:hover {
   transform: translateY(-4px) !important;
   box-shadow: 0 10px 30px rgba(15, 38, 74, 0.05) !important;
 }
 
-.bg-light .areas h3, .bg-light .svc h3, .bg-light .diff h3, .bg-light .tl-step h3,
+.bg-light .areas h3, .bg-light .diff h3, .bg-light .tl-step h3,
 .bg-light .areas .area-tab, .bg-light .areas .area-tab__name, .bg-light .areas h4 {
   color: var(--safra-navy) !important;
 }
 
 .bg-light .areas p, .bg-light .areas span, .bg-light .areas li,
-.bg-light .svc p, .bg-light .diff p, .bg-light .tl-step p {
+.bg-light .diff p, .bg-light .tl-step p {
   color: var(--gray-700) !important;
 }
 
-.bg-light .areas svg, .bg-light .svc svg, .bg-light .diff svg, .bg-light .tl-step svg {
+.bg-light .areas svg, .bg-light .diff svg, .bg-light .tl-step svg {
   stroke: var(--safra-navy) !important;
+}
+
+/* Service Cards on Light Background: Dark Blue with White Text/Icon */
+.bg-light .svc {
+  background: var(--safra-navy) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  position: relative;
+  overflow: visible !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+
+.bg-light .svc::after {
+  border-radius: 0px !important;
+}
+
+.bg-light .svc:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25) !important;
+  border-color: var(--gold) !important;
+}
+
+.bg-light .svc h3 {
+  color: var(--white) !important;
+}
+
+.bg-light .svc p {
+  color: var(--gray-300) !important;
+}
+
+.bg-light .svc svg {
+  stroke: var(--white) !important;
 }
 
 /* Tab container overrides inside Light Backgrounds */
@@ -915,8 +948,22 @@ footer { background-color: var(--ink-950) !important; }
 
 @media (min-width: 960px) {
   .svc {
-    flex: 1 1 calc(33.333% - 16px);
-    max-width: calc(33.333% - 16px);
+    flex: 1 1 0;
+    max-width: none;
+    padding: 24px 16px !important;
+  }
+  .svc svg {
+    width: 24px !important;
+    height: 24px !important;
+    margin-bottom: 14px !important;
+  }
+  .svc h3 {
+    font-size: 15px !important;
+    margin-bottom: 6px !important;
+  }
+  .svc p {
+    font-size: 13px !important;
+    line-height: 1.45 !important;
   }
 }
 
@@ -1649,6 +1696,59 @@ footer {
   position: absolute;
 }
 
+/* Quem Somos: compact height + full-bleed image */
+.statement--compact {
+  padding: 0;
+}
+
+.statement-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  min-height: 480px;
+  width: 100%;
+}
+
+.statement-text {
+  padding: clamp(40px, 5vw, 72px) clamp(24px, 5vw, 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  max-width: 640px;
+  margin-left: auto;
+}
+
+.photo-card--fill {
+  border-radius: 0 !important;
+  overflow: hidden;
+  margin: 0;
+  border: none !important;
+  box-shadow: none !important;
+  height: 100%;
+  min-height: 100%;
+}
+
+.photo-card--fill img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: unset;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .statement-split {
+    grid-template-columns: 1fr;
+  }
+  .photo-card--fill {
+    min-height: 260px;
+  }
+  .statement-text {
+    margin-left: 0;
+  }
+}
+
 /* ============================================
    RITMO E ALINHAMENTO DE SEÇÕES
    ============================================ */
@@ -1660,6 +1760,7 @@ footer {
 .sec-head h2 {
   margin-bottom: 16px;
   text-transform: uppercase;
+  font-size: clamp(28px, 3.2vw, 44px);
 }
 
 .sec-sub {
@@ -1670,10 +1771,10 @@ footer {
 
 @media (min-width: 900px) {
   .sec-head {
-    max-width: 920px;
+    max-width: 1060px;
   }
   .sec-head h2 {
-    max-width: 32ch;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
