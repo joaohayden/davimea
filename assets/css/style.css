@@ -2417,7 +2417,15 @@ footer {
   color: var(--safra-navy);
 }
 
-@media (max-width: 559px) {
+/* Hide WhatsApp float when mobile menu is open */
+.mobile-menu.open ~ .whatsapp-float {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+@media (max-width: 859px) {
   .whatsapp-float {
     bottom: 20px;
     right: 20px;
