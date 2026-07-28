@@ -349,7 +349,7 @@
     }
 
     tooltip.addEventListener('click', function () {
-      window.open('https://wa.me/5592984622007', '_blank');
+      window.open('https://wa.me/5592984622007?text=Ol%C3%A1,%20vim%20da%20landing%20page%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20intermedia%C3%A7%C3%A3o%20de%20neg%C3%B3cios.', '_blank');
     });
   }
 
