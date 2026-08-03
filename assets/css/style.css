@@ -628,6 +628,32 @@ header {
   opacity: .15;
 }
 
+.hero-verse {
+  position: absolute;
+  bottom: 24px;
+  left: 48px; /* Alignment with wrap */
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  z-index: 10;
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .hero-verse {
+    left: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-verse {
+    left: 20px;
+    bottom: 20px;
+    font-size: 10px;
+  }
+}
+
 /* ============================================
    STATS BAND (light break)
    ============================================ */
@@ -1814,19 +1840,20 @@ footer {
 .area-panel__list li {
   font-size: 14.5px;
   color: var(--gray-700);
-  padding: 12px 0 12px 20px;
+  padding: 12px 0 12px 28px;
   position: relative;
-  border-bottom: 1px solid var(--gray-200);
 }
 
 .area-panel__list li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 20px;
-  width: 9px;
-  height: 1px;
-  background: var(--gold);
+  top: 15px;
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid var(--gold);
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--gold) 2.5px, transparent 3px);
 }
 
 @media (prefers-reduced-motion: reduce) {
