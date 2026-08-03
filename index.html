@@ -34,7 +34,14 @@
   <!-- ============ NAVIGATION ============ -->
   <header>
     <nav class="nav" aria-label="Principal">
-      <a class="brand" href="#topo">DEX negócios</a>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a class="brand" href="#topo" style="margin: 0;">DEX negócios</a>
+        <div class="lang-flags" style="display: flex; gap: 8px; font-size: 18px; filter: grayscale(50%);">
+          <span title="Português" style="cursor: pointer; filter: grayscale(0%);">🇧🇷</span>
+          <span title="English" style="cursor: pointer; opacity: 0.5; transition: 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.5'">🇺🇸</span>
+          <span title="Español" style="cursor: pointer; opacity: 0.5; transition: 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.5'">🇪🇸</span>
+        </div>
+      </div>
       <ul class="nav-links">
         <li><a href="#atuacao">Áreas de Atuação</a></li>
         <li><a href="#servicos">Serviços</a></li>
@@ -476,7 +483,7 @@
               </svg>
               <div>
                 <h3>Foco em<br>resultado</h3>
-                <p>Não entregamos relatório. Entregamos negócio fechado e capital captado.</p>
+                <p>Não entregamos apenas relatórios. Entregamos o seu negócio fechado.</p>
               </div>
             </div>
           </div>
