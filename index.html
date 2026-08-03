@@ -36,10 +36,18 @@
     <nav class="nav" aria-label="Principal">
       <div style="display: flex; align-items: center; gap: 16px;">
         <a class="brand" href="#topo" style="margin: 0;">DEX negócios</a>
-        <div class="lang-flags" style="display: flex; gap: 10px; font-size: 20px; align-items: center;">
-          <span title="Português" style="cursor: pointer; transform: scale(1.1); transition: 0.2s; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));">🇧🇷</span>
-          <span title="English" style="cursor: pointer; opacity: 0.6; transition: 0.2s; filter: drop-shadow(0 2px 4px rgba(0,0,0,0));" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.1)'; this.style.filter='drop-shadow(0 2px 4px rgba(0,0,0,0.2))'" onmouseout="this.style.opacity='0.6'; this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 2px 4px rgba(0,0,0,0))'">🇺🇸</span>
-          <span title="Español" style="cursor: pointer; opacity: 0.6; transition: 0.2s; filter: drop-shadow(0 2px 4px rgba(0,0,0,0));" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.1)'; this.style.filter='drop-shadow(0 2px 4px rgba(0,0,0,0.2))'" onmouseout="this.style.opacity='0.6'; this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 2px 4px rgba(0,0,0,0))'">🇪🇸</span>
+        <div class="lang-selector" style="position: relative; padding: 4px; display: flex; align-items: center; cursor: pointer;" onmouseover="this.querySelector('.lang-menu').style.display='flex'; setTimeout(() => this.querySelector('.lang-menu').style.opacity='1', 10)" onmouseout="this.querySelector('.lang-menu').style.opacity='0'; setTimeout(() => this.querySelector('.lang-menu').style.display='none', 200)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 22px; height: 22px; opacity: 0.8; transition: 0.2s; color: var(--safra-navy);" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          
+          <div class="lang-menu" style="display: none; opacity: 0; position: absolute; top: 100%; left: -4px; margin-top: 4px; background: var(--white); padding: 8px 12px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); flex-direction: column; gap: 8px; font-size: 20px; z-index: 100; transition: opacity 0.2s; border: 1px solid var(--gray-200);">
+            <span title="Português" style="cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">🇧🇷</span>
+            <span title="English" style="cursor: pointer; opacity: 0.6; transition: all 0.2s;" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.1)'" onmouseout="this.style.opacity='0.6'; this.style.transform='scale(1)'">🇺🇸</span>
+            <span title="Español" style="cursor: pointer; opacity: 0.6; transition: all 0.2s;" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.1)'" onmouseout="this.style.opacity='0.6'; this.style.transform='scale(1)'">🇪🇸</span>
+          </div>
         </div>
       </div>
       <ul class="nav-links">
