@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DEX Intermediación de Negocios y M&A</title>
+  <meta name="description"
+    content="Compra, venta y expansión de empresas en Brasil y en el exterior. Estrategia, confidencialidad y resultados." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="DEX Intermediación de Negocios y M&A" />
+  <meta property="og:description"
+    content="Compra, venta y expansión de empresas en Brasil y en el exterior. Estrategia, confidencialidad y resultados." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+
+  <!-- Alternate Language Links for International SEO -->
+  <link rel="alternate" hreflang="pt-br" href="../index.html" />
+  <link rel="alternate" hreflang="en" href="../en/index.html" />
+  <link rel="alternate" hreflang="es" href="index.html" />
+  <link rel="alternate" hreflang="x-default" href="../index.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../assets/css/style.css?v=5" />
+</head>
+
+<body>
+
+  <!-- ============ NAVEGACIÓN ============ -->
+  <header>
+    <nav class="nav" aria-label="Navegación Principal">
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a class="brand" href="#topo" style="margin: 0;">DEX negócios</a>
+        <div class="country-lang-selector" id="countryLangSelector">
+          <button class="country-lang-btn" id="countryLangBtn" type="button" aria-haspopup="true" aria-expanded="false">
+            <span class="curr-flag">🇪🇸</span>
+            <span class="curr-name">España</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          
+          <div class="country-lang-dropdown" id="countryLangDropdown">
+            <a class="country-opt" href="../index.html" data-flag="🇧🇷" data-country="Brasil" data-lang="pt" style="text-decoration: none;">
+              <span class="opt-flag">🇧🇷</span>
+              <div class="opt-text">
+                <strong>Brasil</strong>
+                <small>Português</small>
+              </div>
+            </a>
+
+            <a class="country-opt" href="../en/index.html" data-flag="🇺🇸" data-country="United States" data-lang="en" style="text-decoration: none;">
+              <span class="opt-flag">🇺🇸</span>
+              <div class="opt-text">
+                <strong>United States</strong>
+                <small>English</small>
+              </div>
+            </a>
+
+            <a class="country-opt active" href="index.html" data-flag="🇪🇸" data-country="España" data-lang="es" style="text-decoration: none;">
+              <span class="opt-flag">🇪🇸</span>
+              <div class="opt-text">
+                <strong>España</strong>
+                <small>Español</small>
+              </div>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#atuacao">Áreas de Actuación</a></li>
+        <li><a href="#servicos">Servicios</a></li>
+        <li><a href="#diferenciais">Diferenciales</a></li>
+        <li><a href="#processo">Proceso</a></li>
+      </ul>
+      <a class="btn btn-primary"
+        href="https://wa.me/5592984622007?text=Hola,%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20intermediaci%C3%B3n%20de%20negocios."
+        target="_blank" rel="noopener noreferrer">Contáctenos</a>
+      <button class="nav__hamburger" id="navHamburger" aria-label="Abrir menú" aria-expanded="false"
+        aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menú de navegación">
+    <a href="#atuacao">Áreas de Actuación</a>
+    <a href="#servicos">Servicios</a>
+    <a href="#diferenciais">Diferenciales</a>
+    <a href="#processo">Proceso</a>
+    <a class="btn btn-primary"
+      href="https://wa.me/5592984622007?text=Hola,%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20intermediaci%C3%B3n%20de%20negocios."
+      target="_blank" rel="noopener noreferrer">Contáctenos</a>
+  </div>
+
+  <main id="topo">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <video class="hero-video" autoplay muted loop playsinline preload="none" poster="../assets/img/hero-poster.jpg"
+        aria-hidden="true">
+        <source src="../assets/video/manausfinal.mp4" type="video/mp4" />
+        <source src="../assets/video/manausfinal.webm" type="video/webm" />
+      </video>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <svg class="routes" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true"
+        focusable="false">
+        <g fill="rgba(231,236,245,.05)">
+          <circle cx="140" cy="120" r="1.5" />
+          <circle cx="320" cy="80" r="1.5" />
+          <circle cx="530" cy="140" r="1.5" />
+          <circle cx="760" cy="90" r="1.5" />
+          <circle cx="980" cy="150" r="1.5" />
+          <circle cx="1120" cy="70" r="1.5" />
+          <circle cx="90" cy="330" r="1.5" />
+          <circle cx="260" cy="420" r="1.5" />
+          <circle cx="480" cy="500" r="1.5" />
+          <circle cx="700" cy="460" r="1.5" />
+          <circle cx="940" cy="530" r="1.5" />
+          <circle cx="1100" cy="400" r="1.5" />
+        </g>
+        <g fill="none" stroke="rgba(143,180,220,.14)" stroke-width="1">
+          <path class="flow" d="M330,340 C480,240 720,150 1150,90" />
+          <path class="flow" d="M330,340 C520,320 780,300 1160,250" />
+          <path class="flow" d="M330,340 C500,420 800,500 1130,540" />
+          <path class="flow" d="M330,340 C280,220 240,140 150,60" />
+          <path class="flow" d="M330,340 C300,450 260,520 170,590" />
+        </g>
+        <g>
+          <circle cx="330" cy="340" r="3.5" fill="rgba(143,180,220,.5)" />
+          <circle cx="330" cy="340" r="9" fill="none" stroke="rgba(143,180,220,.2)" />
+        </g>
+      </svg>
+
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Intermediación y Consultoría de Negocios</span>
+          <h1 id="hero-title" class="long-title">
+            <span class="l1">El próximo negocio</span>
+            <span class="l2">puede comenzar con</span>
+            <span class="l2"> una conversación.</span>
+          </h1>
+
+          <p class="sub">Compra, venta y expansión de empresas en Brasil y en el exterior.
+            Estrategia, confidencialidad y resultados.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary"
+              href="https://wa.me/5592984622007?text=Hola,%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20intermediaci%C3%B3n%20de%20negocios."
+              target="_blank" rel="noopener noreferrer">Contáctenos <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost" href="#processo">Ver cómo funciona</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M12 5v14M19 12l-7 7-7-7" />
+        </svg>
+      </div>
+      <div class="hero-verse">
+        Porque para Dios nada es imposible. &mdash; Lucas 1:37
+      </div>
+    </section>
+
+    <!-- ============ TRUST STRIP ============ -->
+    <div class="trust-strip rv">
+      <div class="wrap trust-strip__row">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true">
+            <rect x="3" y="11" width="18" height="10" rx="2" />
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          </svg>
+          <div><b>Confidencialidad Total</b><span>En toda operación</span></div>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+            <path d="M22 4L12 14.01l-3-3" />
+          </svg>
+          <div><b>Análisis Inicial Gratuito</b><span>Sin compromiso</span></div>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 6v6l4 2" />
+          </svg>
+          <div><b>Respuesta en 24h</b><span>Atención directa</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ STATS (light band) ============ -->
+    <div class="stats-band rv">
+      <div class="stats" role="list">
+        <div class="stat" role="listitem">
+          <span class="n">US$ 120M<em>+</em></span>
+          <span class="l">Volumen transaccionado</span>
+        </div>
+        <div class="stat" role="listitem">
+          <span class="n">40<em>+</em></span>
+          <span class="l">Operaciones estructuradas</span>
+        </div>
+
+        <div class="stat" role="listitem">
+          <span class="n">10<em>+</em></span>
+          <span class="l">Años de experiencia</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ LOGOS CAROUSEL ============ -->
+    <div class="logos-band bg-light" aria-label="Empresas que confían en nuestro trabajo">
+      <div class="logos-band__header">
+        <p class="logos-band__label">Empresas que <strong>confían</strong> en nosotros</p>
+      </div>
+      <div class="logos-track-wrap">
+        <div class="logos-track" aria-hidden="true">
+          <div class="logo-item">
+            <img src="../assets/img/logos/LOGO-AC%C2%B8O-MANAUS-VERTICAL.png" alt="Aço Manaus" />
+          </div>
+          <div class="logo-item">
+            <img src="../assets/img/logos/Logo-Atem-PNG.png" alt="Atem" />
+          </div>
+          <div class="logo-item">
+            <img src="../assets/img/logos/1689779404947.jpeg" alt="Navetrans" />
+          </div>
+          <div class="logo-item">
+            <img src="../assets/img/logos/Screenshot at Jul 28 07-19-45.png" alt="Petrocity" />
+          </div>
+          <div class="logo-item">
+            <img src="../assets/img/logos/Screenshot at Jul 28 07-24-21.png" alt="Grupo GP" />
+          </div>
+          <div class="logo-item">
+            <img src="../assets/img/logos/Screenshot at Jul 28 08-02-42.png" alt="Manaus Medicamentos" />
+          </div>
+          <!-- Loop clone -->
+          <div class="logo-item">
+            <img src="../assets/img/logos/LOGO-AC%C2%B8O-MANAUS-VERTICAL.png" alt="Aço Manaus" />
+          </div>
+          <div class="logo-item">
+            <img src="../assets/img/logos/Logo-Atem-PNG.png" alt="Atem" />
+          </div>
+          <div class="logo-item">
+            <img src="../assets/img/logos/1689779404947.jpeg" alt="Navetrans" />
+          </div>
+          <div class="logo-item">
+            <img src="../assets/img/logos/Screenshot at Jul 28 07-19-45.png" alt="Petrocity" />
+          </div>
+          <div class="logo-item">
+            <img src="../assets/img/logos/Screenshot at Jul 28 07-24-21.png" alt="Grupo GP" />
+          </div>
+          <div class="logo-item">
+            <img src="../assets/img/logos/Screenshot at Jul 28 08-02-42.png" alt="Manaus Medicamentos" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ STATEMENT ============ -->
+    <section class="statement statement--compact bg-light" aria-labelledby="statement-title">
+      <div class="statement-split">
+        <div class="statement-text rv">
+          <span class="eyebrow">Quiénes somos</span>
+          <h2 id="pos-title" class="grad-text">Somos el puente entre su empresa y su próximo gran paso.</h2>
+          <p>Red de inversionistas, compradores y socios en Brasil y en el exterior, junto a la inteligencia de mercado para negociar en las mejores condiciones. Un único objetivo: transformar la oportunidad en un negocio cerrado.</p>
+        </div>
+        <figure class="photo-card photo-card--fill rv">
+          <img src="../assets/img/reuniao.png" alt="Reunión de negocios" loading="lazy" width="1000" height="667" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ ÁREAS DE ACTUACIÓN ============ -->
+    <section id="atuacao" aria-labelledby="atuacao-title">
+      <div class="wrap">
+        <div class="sec-head rv">
+          <span class="eyebrow">Áreas de Actuación</span>
+          <h2 id="atuacao-title">Dónde Generamos Valor</h2>
+          <p class="sec-sub">Tres frentes de actuación, un objetivo: generar valor para su empresa.</p>
+        </div>
+        <div class="svc-grid">
+          <article class="svc rv">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
+              <path d="M3 21h18" />
+              <path d="M4 21V9l8-5 8 5v12" />
+              <path d="M9 21v-6h6v6" />
+            </svg>
+            <h3>Capital &amp; M&amp;A</h3>
+            <p>Compra, venta y capital para el próximo salto de su empresa.</p>
+            <ul class="area-panel__list" style="margin-top: 1.5rem; grid-template-columns: 1fr; max-width: 380px; margin-left: auto; margin-right: auto;">
+              <li>Compra y venta de empresas</li>
+              <li>Fusiones y adquisiciones (M&amp;A)</li>
+              <li>Valuation y valorización de negocios</li>
+              <li>Identificación de compradores y socios</li>
+              <li>Joint ventures y negociaciones</li>
+            </ul>
+          </article>
+
+          <article class="svc rv">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M2 12h20" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+            <h3>Expansión Global</h3>
+            <p>De Brasil para el mundo, y del mundo para Brasil.</p>
+            <ul class="area-panel__list" style="margin-top: 1.5rem; grid-template-columns: 1fr; max-width: 380px; margin-left: auto; margin-right: auto;">
+              <li>Negocios nacionales e internacionales</li>
+              <li>Internacionalización de empresas</li>
+              <li>Apertura de nuevos mercados</li>
+              <li>Oportunidades de nuevos negocios</li>
+              <li>Alianzas estratégicas internacionales</li>
+            </ul>
+          </article>
+        </div>
+
+        <div style="margin-top: 16px; width: 100%;">
+          <article class="svc rv" style="width: 100%; box-sizing: border-box;">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width: 32px; height: 32px; margin-bottom: 12px; stroke: var(--gold);">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+            <h3 style="text-transform: uppercase;">Conexiones Estratégicas</h3>
+            <p>Conectamos a su empresa con los principales sectores y socios del mercado.</p>
+            
+            <div class="connections-row-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); margin-top: 2.5rem; width: 100%; box-sizing: border-box;">
+              
+              <!-- Item 1 -->
+              <div style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 1rem 0.5rem; border-right: 1px solid var(--gray-200); text-align: center;">
+                <div style="height: 36px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--safra-navy)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 28px; height: 28px;">
+                    <path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 3.2-1.3 5.5-1.3s3 1.3 5.5 1.3 3.2-1.3 5.5-1.3c1.3 0 1.9.5 2.5 1V19c-.6-.5-1.2-1-2.5-1-2.5 0-3.2 1.3-5.5 1.3-2.3 0-3-1.3-5.5-1.3-2.5 0-3.2 1.3-5.5 1.3-1.3 0-1.9-.5-2.5-1v2z"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M12 10v4"/><path d="M12 2v3"/>
+                  </svg>
+                </div>
+                <h4 style="font-size: 13px; color: var(--safra-navy); margin: 0; line-height: 1.3; font-weight: 600;">Navegación y<br>Logística</h4>
+              </div>
+
+              <!-- Item 2 -->
+              <div style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 1rem 0.5rem; border-right: 1px solid var(--gray-200); text-align: center;">
+                <div style="height: 36px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--safra-navy)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 28px; height: 28px;">
+                    <path d="M5 18H3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3"/><path d="M8 18h8"/><path d="M16 18h5a2 2 0 0 0 2-2v-4l-3-4h-4v10"/><circle cx="6.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/>
+                  </svg>
+                </div>
+                <h4 style="font-size: 13px; color: var(--safra-navy); margin: 0; line-height: 1.3; font-weight: 600;">Transporte</h4>
+              </div>
+
+              <!-- Item 3 -->
+              <div style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 1rem 0.5rem; border-right: 1px solid var(--gray-200); text-align: center;">
+                <div style="height: 36px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--safra-navy)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 28px; height: 28px;">
+                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+                  </svg>
+                </div>
+                <h4 style="font-size: 13px; color: var(--safra-navy); margin: 0; line-height: 1.3; font-weight: 600;">Licenciamiento<br>Ambiental</h4>
+              </div>
+
+              <!-- Item 4 -->
+              <div style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 1rem 0.5rem; border-right: 1px solid var(--gray-200); text-align: center;">
+                <div style="height: 36px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--safra-navy)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 28px; height: 28px;">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>
+                  </svg>
+                </div>
+                <h4 style="font-size: 13px; color: var(--safra-navy); margin: 0; line-height: 1.3; font-weight: 600;">Salud y<br>Farmacéutico</h4>
+              </div>
+
+              <!-- Item 5 -->
+              <div style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 1rem 0.5rem; border-right: 1px solid var(--gray-200); text-align: center;">
+                <div style="height: 36px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--safra-navy)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 28px; height: 28px;">
+                    <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/>
+                  </svg>
+                </div>
+                <h4 style="font-size: 13px; color: var(--safra-navy); margin: 0; line-height: 1.3; font-weight: 600;">Alimentario</h4>
+              </div>
+
+              <!-- Item 6 WITH HOVER TOOLTIP -->
+              <div class="segment-more-trigger" style="position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 1rem 0.5rem; text-align: center; cursor: pointer;">
+                <div style="height: 36px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 28px; height: 28px;">
+                    <circle cx="12" cy="12" r="1.5" fill="var(--gold)"/>
+                    <circle cx="18" cy="12" r="1.5" fill="var(--gold)"/>
+                    <circle cx="6" cy="12" r="1.5" fill="var(--gold)"/>
+                  </svg>
+                </div>
+                <h4 style="font-size: 13px; color: var(--gold); margin: 0; line-height: 1.3; font-weight: 700;">+ Diversos otros<br>sectores</h4>
+
+                <!-- Tooltip / Toast element -->
+                <div class="segment-tooltip-box">
+                  <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); font-weight: 700; margin-bottom: 8px; border-bottom: 1px solid var(--gray-200); padding-bottom: 6px;">Otros Sectores Conectados</div>
+                  <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; color: var(--safra-navy); display: flex; flex-direction: column; gap: 8px; text-align: left;">
+                    <li style="display: flex; align-items: center; gap: 8px; font-weight: 500;"><span style="color: var(--gold); font-weight: bold;">•</span> Infraestructura</li>
+                    <li style="display: flex; align-items: center; gap: 8px; font-weight: 500;"><span style="color: var(--gold); font-weight: bold;">•</span> Comercio Exterior</li>
+                    <li style="display: flex; align-items: center; gap: 8px; font-weight: 500;"><span style="color: var(--gold); font-weight: bold;">•</span> Movimiento de Tierras</li>
+                    <li style="display: flex; align-items: center; gap: 8px; font-weight: 500;"><span style="color: var(--gold); font-weight: bold;">•</span> Agronegocio</li>
+                    <li style="display: flex; align-items: center; gap: 8px; font-weight: 500;"><span style="color: var(--gold); font-weight: bold;">•</span> Energía e Ingeniería</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section id="servicos" class="bg-light" aria-labelledby="servicos-title">
+      <div class="wrap">
+        <div class="sec-head rv">
+          <span class="eyebrow">Servicios</span>
+          <h2 id="svc-title">Cómo aceleramos su negocio</h2>
+          <p class="sec-sub">Asesoría de principio a fin, del diagnóstico al cierre.</p>
+        </div>
+
+        <div class="svc-grid">
+          <article class="svc rv">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
+              <path d="M16 3h5v5" />
+              <path d="M8 21H3v-5" />
+              <path d="M21 3l-7 7" />
+              <path d="M3 21l7-7" />
+            </svg>
+            <h3>Venta y adquisición de empresas</h3>
+            <p>Desde la valoración hasta el cierre, con confidencialidad absoluta y usted en control de cada etapa.</p>
+          </article>
+
+          <article class="svc rv">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
+              <path d="M3 17l6-6 4 4 8-8" />
+              <path d="M21 7v6h-6" />
+            </svg>
+            <h3>Consultoría para venta</h3>
+            <p>Una empresa preparada vale más y se vende más rápido. Preparamos la suya para el mercado.</p>
+          </article>
+
+          <article class="svc rv">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M2 12h20" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+            <h3>Negocios internacionales</h3>
+            <p>De Brasil para el mundo, y del mundo para Brasil, con estructura y seguridad.</p>
+          </article>
+        </div>
+
+        <div class="sec-cta rv">
+          <a class="btn btn-ghost"
+            href="https://wa.me/5592984622007?text=Hola,%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20intermediaci%C3%B3n%20de%20negocios."
+            target="_blank" rel="noopener noreferrer">Contáctenos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DIFERENCIALES ============ -->
+    <section id="diferenciais" aria-labelledby="diff-title" class="diff-split-section">
+      <div class="diff-split">
+        <figure class="photo-card photo-card--fill photo-card--left rv">
+          <img src="../assets/img/handshake2.jpg" alt="Apretón de manos simbolizando cierre de negocio" loading="lazy"
+            width="1000" height="667" />
+        </figure>
+        <div class="diff-split__content rv">
+          <div class="diff-split__head">
+            <span class="eyebrow">Diferenciales</span>
+            <h2 id="diff-title">Por qué nos confían las decisiones más importantes</h2>
+            <p class="sec-sub">Discreción, red calificada y enfoque total en el cierre.</p>
+          </div>
+          <div class="diff-cards">
+            <div class="diff rv">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <rect x="3" y="11" width="18" height="10" rx="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+              <div>
+                <h3>Confidencialidad<br>absoluta</h3>
+                <p>Ninguna información sobre su empresa llega al mercado sin su autorización explícita.</p>
+              </div>
+            </div>
+            <div class="diff rv">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <circle cx="6" cy="6" r="3" />
+                <circle cx="18" cy="6" r="3" />
+                <circle cx="6" cy="18" r="3" />
+                <circle cx="18" cy="18" r="3" />
+                <path d="M9 6h6M6 9v6M18 9v6M9 18h6" />
+              </svg>
+              <div>
+                <h3>Red nacional<br>e internacional</h3>
+                <p>Acceso directo a inversionistas, compradores y socios calificados en todo el mundo.</p>
+              </div>
+            </div>
+            <div class="diff rv">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M12 3v18" />
+                <path d="M5 8l7-5 7 5" />
+                <path d="M3 21h18" />
+                <path d="M7 21v-6" />
+                <path d="M17 21v-6" />
+              </svg>
+              <div>
+                <h3>Negociación<br>estratégica</h3>
+                <p>Nos sentamos a la mesa por usted para proteger su valor y cerrar en las mejores condiciones.</p>
+              </div>
+            </div>
+            <div class="diff rv">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <path d="M22 4L12 14.01l-3-3" />
+              </svg>
+              <div>
+                <h3>Enfoque en<br>resultados</h3>
+                <p>No entregamos solo informes. Entregamos su negocio cerrado.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESO ============ -->
+    <section class="process bg-light" id="processo" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="sec-head rv">
+          <span class="eyebrow">Proceso</span>
+          <h2 id="how-title">El camino correcto para su negocio exitoso</h2>
+          <p class="sec-sub">Cuatro etapas claras, sin sorpresas.</p>
+        </div>
+        <ol class="timeline rv">
+          <li class="tl-step rv">
+            <span class="dot">01</span>
+            <h3>Conversación estratégica</h3>
+            <p>Su objetivo, su momento y lo que está en juego. Confidencial.</p>
+          </li>
+          <li class="tl-step rv">
+            <span class="dot">02</span>
+            <h3>Diagnóstico y Valoración</h3>
+            <p>Evaluamos la operación, definimos valor y armamos la estrategia.</p>
+          </li>
+          <li class="tl-step rv">
+            <span class="dot">03</span>
+            <h3>Conexión y negociación</h3>
+            <p>Activamos la red y conducimos la negociación por usted.</p>
+          </li>
+          <li class="tl-step rv">
+            <span class="dot">04</span>
+            <h3>Cierre</h3>
+            <p>Estructuramos el cierre y seguimos a su lado hasta el final.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <div class="cta-final" id="contato">
+      <div class="cta-card rv">
+        <span class="eyebrow">Hablemos</span>
+        <h2 class="grad-text">La Clave de su Negocio Está Aquí.</h2>
+        <p class="sub">Hable con nuestro equipo y descubra, sin compromiso, cómo acelerar el crecimiento de su empresa.</p>
+        <a class="btn btn-primary"
+          href="https://wa.me/5592984622007?text=Hola,%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20intermediaci%C3%B3n%20de%20negocios."
+          target="_blank" rel="noopener noreferrer">Entrar en contacto <span class="arrow"
+            aria-hidden="true">→</span></a>
+        <p class="hero-support">Atención confidencial · Análisis inicial gratuito</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a class="brand" href="#topo">Davi M&amp;A</a>
+          <p>Transformando oportunidades en grandes negocios. Confidencialidad, estrategia y resultados en cada operación en Brasil y el mundo.</p>
+        </div>
+        <div class="foot-col">
+          <h3>Empresa</h3>
+          <ul>
+            <li><a href="#servicos">Servicios</a></li>
+            <li><a href="#diferenciais">Diferenciales</a></li>
+            <li><a href="#processo">Proceso</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h3>Contacto</h3>
+          <ul>
+            <li><a
+                href="https://wa.me/5592984622007?text=Hola,%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20intermediaci%C3%B3n%20de%20negocios."
+                target="_blank" rel="noopener noreferrer">WhatsApp: (92) 98462-2007</a></li>
+            <li><a href="mailto:davi.diretoria@distribuidoramanaus.com.br">davi.diretoria@distribuidoramanaus.com.br</a>
+            </li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h3>Dirección</h3>
+          <p
+            style="font-size: 14px; color: var(--gray-300); line-height: 1.6; margin: 0; font-family: 'Open Sans', sans-serif;">
+            Av. Bom Jesus, 115<br>
+            Colônia Terra Nova - Sala 01<br>
+            Manaus - AM - Brasil
+          </p>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 Davi M&amp;A. Todos los derechos reservados.</span>
+        <span class="mono">Manaus - AM</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <div class="whatsapp-float" id="whatsappFloat">
+    <div class="whatsapp-tooltip" id="whatsappTooltip">
+      <span>¿Tiene alguna pregunta? Contáctenos por WhatsApp.</span>
+      <button class="whatsapp-tooltip__close" id="closeTooltip" aria-label="Cerrar mensaje">&times;</button>
+    </div>
+    <a href="https://wa.me/5592984622007?text=Hola,%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20intermediaci%C3%B3n%20de%20negocios."
+      target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Hablar por WhatsApp">
+      <svg viewBox="0 0 16 16" fill="currentColor">
+        <path
+          d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.153.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+      </svg>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="../assets/js/script.js"></script>
+</body>
+
+</html>
