@@ -36,48 +36,12 @@
     <nav class="nav" aria-label="Principal">
       <div style="display: flex; align-items: center; gap: 16px;">
         <a class="brand" href="#topo" style="margin: 0;">DEX negócios</a>
-        <div class="country-lang-selector" id="countryLangSelector">
-          <button class="country-lang-btn" id="countryLangBtn" type="button" aria-haspopup="true" aria-expanded="false">
-            <span class="curr-flag">🇧🇷</span>
-            <span class="curr-name">Brasil</span>
-            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-
-          <div class="country-lang-dropdown" id="countryLangDropdown">
-            <a class="country-opt active" href="index.html" data-flag="🇧🇷" data-country="Brasil" data-lang="pt"
-              style="text-decoration: none;">
-              <span class="opt-flag">🇧🇷</span>
-              <div class="opt-text">
-                <strong>Brasil</strong>
-                <small>Português</small>
-              </div>
-              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </a>
-
-            <a class="country-opt" href="en/index.html" data-flag="🇺🇸" data-country="United States" data-lang="en"
-              style="text-decoration: none;">
-              <span class="opt-flag">🇺🇸</span>
-              <div class="opt-text">
-                <strong>United States</strong>
-                <small>English</small>
-              </div>
-            </a>
-
-            <a class="country-opt" href="es/index.html" data-flag="🇪🇸" data-country="España" data-lang="es"
-              style="text-decoration: none;">
-              <span class="opt-flag">🇪🇸</span>
-              <div class="opt-text">
-                <strong>España</strong>
-                <small>Español</small>
-              </div>
-            </a>
-          </div>
+        <div class="lang-pill" style="display: flex; align-items: center; background: rgba(10, 29, 56, 0.06); border-radius: 24px; padding: 4px; position: relative;">
+          <div id="flag-toast" style="position: absolute; top: 130%; left: 50%; transform: translateX(-50%) translateY(10px); background: #fff; padding: 4px 12px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-size: 20px; opacity: 0; pointer-events: none; transition: all 0.3s ease; z-index: 100;"></div>
+          
+          <button class="lang-pill-btn active" data-url="index.html" data-flag="🇧🇷" style="border:none; border-radius:20px; padding: 6px 14px; font-size:12px; font-family: 'Inter', sans-serif; font-weight:700; cursor:pointer; background: #fff; color: var(--safra-navy); box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: 0.2s;">PT</button>
+          <button class="lang-pill-btn" data-url="en/index.html" data-flag="🇺🇸" style="border:none; border-radius:20px; padding: 6px 14px; font-size:12px; font-family: 'Inter', sans-serif; font-weight:600; cursor:pointer; background: transparent; color: var(--safra-navy); opacity:0.6; transition: 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">EN</button>
+          <button class="lang-pill-btn" data-url="es/index.html" data-flag="🇪🇸" style="border:none; border-radius:20px; padding: 6px 14px; font-size:12px; font-family: 'Inter', sans-serif; font-weight:600; cursor:pointer; background: transparent; color: var(--safra-navy); opacity:0.6; transition: 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">ES</button>
         </div>
       </div>
       <ul class="nav-links">
