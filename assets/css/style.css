@@ -2522,3 +2522,131 @@ footer {
   visibility: visible;
   transform: translateX(-50%) translateY(-12px);
 }
+
+/* ============================================
+   COUNTRY & LANGUAGE SELECTOR (i18n)
+   ============================================ */
+.country-lang-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.country-lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--safra-navy);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.country-lang-btn:hover {
+  border-color: var(--safra-navy);
+  background: rgba(10, 29, 56, 0.04);
+}
+
+.country-lang-btn .curr-flag {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.country-lang-btn .curr-name {
+  font-weight: 600;
+}
+
+.country-lang-btn .chevron-icon {
+  width: 14px;
+  height: 14px;
+  opacity: 0.7;
+  transition: transform 0.2s ease;
+}
+
+.country-lang-selector.open .chevron-icon {
+  transform: rotate(180deg);
+}
+
+.country-lang-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  width: 230px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  padding: 6px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.country-lang-selector.open .country-lang-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.country-opt {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.country-opt:hover {
+  background: var(--gray-100);
+}
+
+.country-opt .opt-flag {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.country-opt .opt-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.country-opt .opt-text strong {
+  font-size: 13px;
+  color: var(--safra-navy);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.country-opt .opt-text small {
+  font-size: 11.5px;
+  color: var(--gray-500);
+}
+
+.country-opt .check-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--gold);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.country-opt.active .check-icon {
+  opacity: 1;
+}
+
+.country-opt.active {
+  background: rgba(212, 175, 55, 0.08);
+}

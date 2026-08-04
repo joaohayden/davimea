@@ -36,29 +36,92 @@
     <nav class="nav" aria-label="Principal">
       <div style="display: flex; align-items: center; gap: 16px;">
         <a class="brand" href="#topo" style="margin: 0;">DEX negócios</a>
-        <div class="lang-selector"
-          style="position: relative; padding: 4px; display: flex; align-items: center; cursor: pointer;"
-          onmouseover="this.querySelector('.lang-menu').style.display='flex'; setTimeout(() => this.querySelector('.lang-menu').style.opacity='1', 10)"
-          onmouseout="this.querySelector('.lang-menu').style.opacity='0'; setTimeout(() => this.querySelector('.lang-menu').style.display='none', 200)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round"
-            style="width: 22px; height: 22px; opacity: 0.8; transition: 0.2s; color: var(--safra-navy);"
-            onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="2" y1="12" x2="22" y2="12"></line>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-          </svg>
+        <div class="country-lang-selector" id="countryLangSelector">
+          <button class="country-lang-btn" id="countryLangBtn" type="button" aria-haspopup="true" aria-expanded="false">
+            <span class="curr-flag">🇧🇷</span>
+            <span class="curr-name">Brasil</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          
+          <div class="country-lang-dropdown" id="countryLangDropdown">
+            <div class="country-opt active" data-flag="🇧🇷" data-country="Brasil" data-lang="pt">
+              <span class="opt-flag">🇧🇷</span>
+              <div class="opt-text">
+                <strong>Brasil</strong>
+                <small>Português</small>
+              </div>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
 
-          <div class="lang-menu"
-            style="display: none; opacity: 0; position: absolute; top: 100%; left: -4px; margin-top: 4px; background: var(--white); padding: 8px 12px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); flex-direction: column; gap: 8px; font-size: 20px; z-index: 100; transition: opacity 0.2s; border: 1px solid var(--gray-200);">
-            <span title="Português" style="cursor: pointer; transition: transform 0.2s;"
-              onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">🇧🇷</span>
-            <span title="English" style="cursor: pointer; opacity: 0.6; transition: all 0.2s;"
-              onmouseover="this.style.opacity='1'; this.style.transform='scale(1.1)'"
-              onmouseout="this.style.opacity='0.6'; this.style.transform='scale(1)'">🇺🇸</span>
-            <span title="Español" style="cursor: pointer; opacity: 0.6; transition: all 0.2s;"
-              onmouseover="this.style.opacity='1'; this.style.transform='scale(1.1)'"
-              onmouseout="this.style.opacity='0.6'; this.style.transform='scale(1)'">🇪🇸</span>
+            <div class="country-opt" data-flag="🇺🇸" data-country="United States" data-lang="en">
+              <span class="opt-flag">🇺🇸</span>
+              <div class="opt-text">
+                <strong>United States</strong>
+                <small>English</small>
+              </div>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+
+            <div class="country-opt" data-flag="🇪🇸" data-country="España" data-lang="es">
+              <span class="opt-flag">🇪🇸</span>
+              <div class="opt-text">
+                <strong>España</strong>
+                <small>Español</small>
+              </div>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+
+            <div class="country-opt" data-flag="🇬🇧" data-country="United Kingdom" data-lang="en-uk">
+              <span class="opt-flag">🇬🇧</span>
+              <div class="opt-text">
+                <strong>United Kingdom</strong>
+                <small>English</small>
+              </div>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+
+            <div class="country-opt" data-flag="🇩🇪" data-country="Deutschland" data-lang="de">
+              <span class="opt-flag">🇩🇪</span>
+              <div class="opt-text">
+                <strong>Deutschland</strong>
+                <small>Deutsch</small>
+              </div>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+
+            <div class="country-opt" data-flag="🇨🇳" data-country="China" data-lang="zh">
+              <span class="opt-flag">🇨🇳</span>
+              <div class="opt-text">
+                <strong>China</strong>
+                <small>中文 (Chinese)</small>
+              </div>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+
+            <div class="country-opt" data-flag="🇦🇪" data-country="Emirados Árabes" data-lang="ar">
+              <span class="opt-flag">🇦🇪</span>
+              <div class="opt-text">
+                <strong>Emirados Árabes</strong>
+                <small>English / العربية</small>
+              </div>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
           </div>
         </div>
       </div>

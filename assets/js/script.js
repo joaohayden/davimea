@@ -353,6 +353,52 @@
     });
   }
 
+  /* ── Country & Language Selector (i18n) ── */
+  function initCountryLangSelector() {
+    var selector = document.getElementById('countryLangSelector');
+    var btn = document.getElementById('countryLangBtn');
+    var dropdown = document.getElementById('countryLangDropdown');
+    if (!selector || !btn || !dropdown) return;
+
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isOpen = selector.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!selector.contains(e.target)) {
+        selector.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    var options = dropdown.querySelectorAll('.country-opt');
+    options.forEach(function (opt) {
+      opt.addEventListener('click', function () {
+        options.forEach(function (o) { o.classList.remove('active'); });
+        opt.classList.add('active');
+
+        var flag = opt.getAttribute('data-flag');
+        var country = opt.getAttribute('data-country');
+        var lang = opt.getAttribute('data-lang');
+
+        var currFlag = btn.querySelector('.curr-flag');
+        var currName = btn.querySelector('.curr-name');
+        if (currFlag) currFlag.textContent = flag;
+        if (currName) currName.textContent = country;
+
+        selector.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+
+        // Custom event hook for future translations
+        document.dispatchEvent(new CustomEvent('countryLangChange', {
+          detail: { flag: flag, country: country, lang: lang }
+        }));
+      });
+    });
+  }
+
   /* ── Init ── */
   document.addEventListener('DOMContentLoaded', function () {
     initReveal();
@@ -363,6 +409,7 @@
     initHeroVideo();
     initAreaTabs();
     initWhatsAppTooltip();
+    initCountryLangSelector();
   });
 
 })();
