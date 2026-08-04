@@ -2486,3 +2486,39 @@ footer {
     font-size: 12.5px;
   }
 }
+
+/* Segment Tooltip Popover */
+.segment-tooltip-box {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  background: #ffffff;
+  border: 1.5px solid var(--gold);
+  border-radius: 8px;
+  padding: 16px 20px;
+  width: 250px;
+  box-shadow: 0 12px 30px rgba(10, 29, 56, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  z-index: 100;
+}
+
+.segment-tooltip-box::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: var(--gold) transparent transparent transparent;
+}
+
+.segment-more-trigger:hover .segment-tooltip-box {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-12px);
+}
