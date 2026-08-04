@@ -2651,3 +2651,16 @@ footer {
 .country-opt.active {
   background: rgba(212, 175, 55, 0.08);
 }
+
+/* ============================================
+   LANGUAGE PILL ANIMATION
+   ============================================ */
+.lang-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+}
+.lang-pill-btn .flg { display: none; font-size: 14px; line-height: 1; }
+.lang-pill-btn:hover .txt { display: none; }
+.lang-pill-btn:hover .flg { display: inline-block; }

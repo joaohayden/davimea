@@ -356,26 +356,14 @@
   /* ── Language Pill Toggle ── */
   function initLangPill() {
     var btns = document.querySelectorAll('.lang-pill-btn');
-    var toast = document.getElementById('flag-toast');
-    if (btns.length === 0 || !toast) return;
+    if (btns.length === 0) return;
 
     btns.forEach(function (btn) {
       btn.addEventListener('click', function (e) {
         e.preventDefault();
         if (this.classList.contains('active')) return;
-
-        var flag = this.getAttribute('data-flag');
         var url = this.getAttribute('data-url');
-
-        // Show flag toast animation
-        toast.textContent = flag;
-        toast.style.opacity = '1';
-        toast.style.transform = 'translateX(-50%) translateY(0)';
-
-        // Redirect after 1.2s to show the animation
-        setTimeout(function () {
-          window.location.href = url;
-        }, 1200);
+        window.location.href = url;
       });
     });
   }
