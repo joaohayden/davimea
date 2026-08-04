@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DEX Intermediação de negócios</title>
+  <title>DEX Business Advisory & M&A</title>
   <meta name="description"
-    content="Compra, venda e expansão de empresas no Brasil e no exterior. Estratégia, sigilo e resultado." />
+    content="Buying, selling, and expanding companies in Brazil and internationally. Strategy, confidentiality, and results." />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Davi M&A - Intermediação e Consultoria de Negócios" />
+  <meta property="og:title" content="DEX Business Advisory & M&A" />
   <meta property="og:description"
-    content="Compra, venda e expansão de empresas no Brasil e no exterior. Estratégia, sigilo e resultado." />
+    content="Buying, selling, and expanding companies in Brazil and internationally. Strategy, confidentiality, and results." />
   <meta property="og:type" content="website" />
-  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Alternate Language Links for International SEO -->
+  <link rel="alternate" hreflang="pt-br" href="../index.html" />
+  <link rel="alternate" hreflang="en" href="index.html" />
+  <link rel="alternate" hreflang="x-default" href="../index.html" />
 
   <!-- Favicon -->
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,46 +31,46 @@
     rel="stylesheet" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="assets/css/style.css?v=5" />
+  <link rel="stylesheet" href="../assets/css/style.css?v=5" />
 </head>
 
 <body>
 
   <!-- ============ NAVIGATION ============ -->
   <header>
-    <nav class="nav" aria-label="Principal">
+    <nav class="nav" aria-label="Main Navigation">
       <div style="display: flex; align-items: center; gap: 16px;">
         <a class="brand" href="#topo" style="margin: 0;">DEX negócios</a>
         <div class="country-lang-selector" id="countryLangSelector">
           <button class="country-lang-btn" id="countryLangBtn" type="button" aria-haspopup="true" aria-expanded="false">
-            <span class="curr-flag">🇧🇷</span>
-            <span class="curr-name">Brasil</span>
+            <span class="curr-flag">🇺🇸</span>
+            <span class="curr-name">United States</span>
             <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </button>
           
           <div class="country-lang-dropdown" id="countryLangDropdown">
-            <a class="country-opt active" href="index.html" data-flag="🇧🇷" data-country="Brasil" data-lang="pt" style="text-decoration: none;">
+            <a class="country-opt" href="../index.html" data-flag="🇧🇷" data-country="Brasil" data-lang="pt" style="text-decoration: none;">
               <span class="opt-flag">🇧🇷</span>
               <div class="opt-text">
                 <strong>Brasil</strong>
                 <small>Português</small>
+              </div>
+            </a>
+
+            <a class="country-opt active" href="index.html" data-flag="🇺🇸" data-country="United States" data-lang="en" style="text-decoration: none;">
+              <span class="opt-flag">🇺🇸</span>
+              <div class="opt-text">
+                <strong>United States</strong>
+                <small>English</small>
               </div>
               <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="20 6 9 17 4 12"></polyline>
               </svg>
             </a>
 
-            <a class="country-opt" href="en/index.html" data-flag="🇺🇸" data-country="United States" data-lang="en" style="text-decoration: none;">
-              <span class="opt-flag">🇺🇸</span>
-              <div class="opt-text">
-                <strong>United States</strong>
-                <small>English</small>
-              </div>
-            </a>
-
-            <a class="country-opt" href="es/index.html" data-flag="🇪🇸" data-country="España" data-lang="es" style="text-decoration: none;">
+            <a class="country-opt" href="../es/index.html" data-flag="🇪🇸" data-country="España" data-lang="es" style="text-decoration: none;">
               <span class="opt-flag">🇪🇸</span>
               <div class="opt-text">
                 <strong>España</strong>
@@ -76,15 +81,15 @@
         </div>
       </div>
       <ul class="nav-links">
-        <li><a href="#atuacao">Áreas de Atuação</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#diferenciais">Diferenciais</a></li>
-        <li><a href="#processo">Processo</a></li>
+        <li><a href="#atuacao">Areas of Expertise</a></li>
+        <li><a href="#servicos">Services</a></li>
+        <li><a href="#diferenciais">Why Us</a></li>
+        <li><a href="#processo">Process</a></li>
       </ul>
       <a class="btn btn-primary"
-        href="https://wa.me/5592984622007?text=Ol%C3%A1,%20vim%20da%20landing%20page%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20intermedia%C3%A7%C3%A3o%20de%20neg%C3%B3cios."
-        target="_blank" rel="noopener noreferrer">Fale conosco</a>
-      <button class="nav__hamburger" id="navHamburger" aria-label="Abrir menu" aria-expanded="false"
+        href="https://wa.me/5592984622007?text=Hello,%20I%20came%20from%20the%20landing%20page%20and%20would%20like%20more%20information%20about%20business%20advisory%20and%20M%26A."
+        target="_blank" rel="noopener noreferrer">Contact Us</a>
+      <button class="nav__hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false"
         aria-controls="mobileMenu">
         <span></span>
         <span></span>
@@ -94,29 +99,27 @@
   </header>
 
   <!-- Mobile Menu Overlay -->
-  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menu de navegação">
-    <a href="#atuacao">Áreas de Atuação</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#diferenciais">Diferenciais</a>
-    <a href="#processo">Processo</a>
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation Menu">
+    <a href="#atuacao">Areas of Expertise</a>
+    <a href="#servicos">Services</a>
+    <a href="#diferenciais">Why Us</a>
+    <a href="#processo">Process</a>
     <a class="btn btn-primary"
-      href="https://wa.me/5592984622007?text=Ol%C3%A1,%20vim%20da%20landing%20page%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20intermedia%C3%A7%C3%A3o%20de%20neg%C3%B3cios."
-      target="_blank" rel="noopener noreferrer">Fale conosco</a>
+      href="https://wa.me/5592984622007?text=Hello,%20I%20came%20from%20the%20landing%20page%20and%20would%20like%20more%20information%20about%20business%20advisory%20and%20M%26A."
+      target="_blank" rel="noopener noreferrer">Contact Us</a>
   </div>
 
   <main id="topo">
 
     <!-- ============ HERO ============ -->
     <section class="hero" aria-labelledby="hero-title">
-      <!-- Background video: MP4 first (universally compatible & smaller here), WebM fallback -->
-      <video class="hero-video" autoplay muted loop playsinline preload="none" poster="assets/img/hero-poster.jpg"
+      <video class="hero-video" autoplay muted loop playsinline preload="none" poster="../assets/img/hero-poster.jpg"
         aria-hidden="true">
-        <source src="assets/video/manausfinal.mp4" type="video/mp4" />
-        <source src="assets/video/manausfinal.webm" type="video/webm" />
+        <source src="../assets/video/manausfinal.mp4" type="video/mp4" />
+        <source src="../assets/video/manausfinal.webm" type="video/webm" />
       </video>
       <div class="hero-overlay" aria-hidden="true"></div>
 
-      <!-- SVG routes: fallback for mobile / no-video -->
       <svg class="routes" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true"
         focusable="false">
         <g fill="rgba(231,236,245,.05)">
@@ -148,21 +151,20 @@
 
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow">Intermediação e Consultoria de Negócios</span>
+          <span class="eyebrow">Business Intermediation &amp; Advisory</span>
           <h1 id="hero-title" class="long-title">
-            <span class="l1">O próximo negócio</span>
-            <span class="l2">pode começar com</span>
-            <span class="l2"> uma conversa.</span>
-
+            <span class="l1">The next deal</span>
+            <span class="l2">can start with</span>
+            <span class="l2"> a conversation.</span>
           </h1>
 
-          <p class="sub">Compra, venda e expansão de empresas no Brasil e no exterior.
-            Estratégia, sigilo e resultado.</p>
+          <p class="sub">Buying, selling, and expanding companies in Brazil and internationally.
+            Strategy, confidentiality, and results.</p>
           <div class="hero-ctas">
             <a class="btn btn-primary"
-              href="https://wa.me/5592984622007?text=Ol%C3%A1,%20vim%20da%20landing%20page%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20intermedia%C3%A7%C3%A3o%20de%20neg%C3%B3cios."
-              target="_blank" rel="noopener noreferrer">Fale conosco <span class="arrow" aria-hidden="true">→</span></a>
-            <a class="btn btn-ghost" href="#processo">Ver como funciona</a>
+              href="https://wa.me/5592984622007?text=Hello,%20I%20came%20from%20the%20landing%20page%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20intermedia%C3%A7%C3%A3o%20de%20neg%C3%B3cios."
+              target="_blank" rel="noopener noreferrer">Contact Us <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost" href="#processo">See how it works</a>
           </div>
         </div>
       </div>
@@ -173,7 +175,7 @@
         </svg>
       </div>
       <div class="hero-verse">
-        Porque para Deus nada é impossível. &mdash; Lucas 1:37
+        For with God nothing shall be impossible. &mdash; Luke 1:37
       </div>
     </section>
 
@@ -186,7 +188,7 @@
             <rect x="3" y="11" width="18" height="10" rx="2" />
             <path d="M7 11V7a5 5 0 0 1 10 0v4" />
           </svg>
-          <div><b>Sigilo Total</b><span>Em toda operação</span></div>
+          <div><b>Total Confidentiality</b><span>In every operation</span></div>
         </div>
         <div class="trust-item">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
@@ -194,7 +196,7 @@
             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
             <path d="M22 4L12 14.01l-3-3" />
           </svg>
-          <div><b>Análise Inicial Gratuita</b><span>Sem compromisso</span></div>
+          <div><b>Free Initial Analysis</b><span>No commitment</span></div>
         </div>
         <div class="trust-item">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
@@ -202,32 +204,7 @@
             <circle cx="12" cy="12" r="10" />
             <path d="M12 6v6l4 2" />
           </svg>
-          <div><b>Resposta em até 24h</b><span>Atendimento direto</span></div>
-        </div>
-        <!-- Clones for infinite marquee on mobile -->
-        <div class="trust-item mobile-clone">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
-            aria-hidden="true">
-            <rect x="3" y="11" width="18" height="10" rx="2" />
-            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-          </svg>
-          <div><b>Sigilo Total</b><span>Em toda operação</span></div>
-        </div>
-        <div class="trust-item mobile-clone">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
-            aria-hidden="true">
-            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-            <path d="M22 4L12 14.01l-3-3" />
-          </svg>
-          <div><b>Análise Inicial Gratuita</b><span>Sem compromisso</span></div>
-        </div>
-        <div class="trust-item mobile-clone">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
-            aria-hidden="true">
-            <circle cx="12" cy="12" r="10" />
-            <path d="M12 6v6l4 2" />
-          </svg>
-          <div><b>Resposta em até 24h</b><span>Atendimento direto</span></div>
+          <div><b>Response within 24h</b><span>Direct advisory</span></div>
         </div>
       </div>
     </div>
@@ -236,83 +213,64 @@
     <div class="stats-band rv">
       <div class="stats" role="list">
         <div class="stat" role="listitem">
-          <span class="n">R$120M<em>+</em></span>
-          <span class="l">Volume transacionado</span>
+          <span class="n">$120M<em>+</em></span>
+          <span class="l">Transaction volume</span>
         </div>
         <div class="stat" role="listitem">
           <span class="n">40<em>+</em></span>
-          <span class="l">Operações estruturadas</span>
+          <span class="l">Structured deals</span>
         </div>
 
         <div class="stat" role="listitem">
           <span class="n">10<em>+</em></span>
-          <span class="l">Anos de experiência</span>
+          <span class="l">Years of experience</span>
         </div>
       </div>
     </div>
+
     <!-- ============ LOGOS CAROUSEL ============ -->
-    <div class="logos-band bg-light" aria-label="Empresas que confiam em nosso trabalho">
+    <div class="logos-band bg-light" aria-label="Companies that trust our work">
       <div class="logos-band__header">
-        <p class="logos-band__label">Empresas que <strong>confiam</strong> em nós</p>
+        <p class="logos-band__label">Companies that <strong>trust</strong> us</p>
       </div>
       <div class="logos-track-wrap">
         <div class="logos-track" aria-hidden="true">
-          <!-- Set 1 -->
           <div class="logo-item">
-            <img src="assets/img/logos/LOGO-AC%C2%B8O-MANAUS-VERTICAL.png" alt="Aço Manaus" />
+            <img src="../assets/img/logos/LOGO-AC%C2%B8O-MANAUS-VERTICAL.png" alt="Aço Manaus" />
           </div>
           <div class="logo-item">
-            <img src="assets/img/logos/Logo-Atem-PNG.png" alt="Atem" />
+            <img src="../assets/img/logos/Logo-Atem-PNG.png" alt="Atem" />
           </div>
           <div class="logo-item">
-            <img src="assets/img/logos/1689779404947.jpeg" alt="Navetrans" />
+            <img src="../assets/img/logos/1689779404947.jpeg" alt="Navetrans" />
           </div>
           <div class="logo-item">
-            <img src="assets/img/logos/Screenshot at Jul 28 07-19-45.png" alt="Petrocity" />
+            <img src="../assets/img/logos/Screenshot at Jul 28 07-19-45.png" alt="Petrocity" />
           </div>
           <div class="logo-item">
-            <img src="assets/img/logos/Screenshot at Jul 28 07-24-21.png" alt="Grupo GP" />
+            <img src="../assets/img/logos/Screenshot at Jul 28 07-24-21.png" alt="Grupo GP" />
           </div>
           <div class="logo-item">
-            <img src="assets/img/logos/Screenshot at Jul 28 08-02-42.png" alt="Manaus Medicamentos" />
+            <img src="../assets/img/logos/Screenshot at Jul 28 08-02-42.png" alt="Manaus Medicamentos" />
           </div>
-          <!-- Set 2 (clone for seamless loop) -->
+          <!-- Loop clone -->
           <div class="logo-item">
-            <img src="assets/img/logos/LOGO-AC%C2%B8O-MANAUS-VERTICAL.png" alt="Aço Manaus" />
-          </div>
-          <div class="logo-item">
-            <img src="assets/img/logos/Logo-Atem-PNG.png" alt="Atem" />
+            <img src="../assets/img/logos/LOGO-AC%C2%B8O-MANAUS-VERTICAL.png" alt="Aço Manaus" />
           </div>
           <div class="logo-item">
-            <img src="assets/img/logos/1689779404947.jpeg" alt="Navetrans" />
+            <img src="../assets/img/logos/Logo-Atem-PNG.png" alt="Atem" />
           </div>
           <div class="logo-item">
-            <img src="assets/img/logos/Screenshot at Jul 28 07-19-45.png" alt="Petrocity" />
+            <img src="../assets/img/logos/1689779404947.jpeg" alt="Navetrans" />
           </div>
           <div class="logo-item">
-            <img src="assets/img/logos/Screenshot at Jul 28 07-24-21.png" alt="Grupo GP" />
+            <img src="../assets/img/logos/Screenshot at Jul 28 07-19-45.png" alt="Petrocity" />
           </div>
           <div class="logo-item">
-            <img src="assets/img/logos/Screenshot at Jul 28 08-02-42.png" alt="Manaus Medicamentos" />
-          </div>
-          <!-- Set 3 (extra buffer) -->
-          <div class="logo-item">
-            <img src="assets/img/logos/LOGO-AC%C2%B8O-MANAUS-VERTICAL.png" alt="Aço Manaus" />
+            <img src="../assets/img/logos/Screenshot at Jul 28 07-24-21.png" alt="Grupo GP" />
           </div>
           <div class="logo-item">
-            <img src="assets/img/logos/Logo-Atem-PNG.png" alt="Atem" />
-          </div>
-          <div class="logo-item">
-            <img src="assets/img/logos/1689779404947.jpeg" alt="Navetrans" />
-          </div>
-          <div class="logo-item">
-            <img src="assets/img/logos/Screenshot at Jul 28 07-19-45.png" alt="Petrocity" />
-          </div>
-          <div class="logo-item">
-            <img src="assets/img/logos/Screenshot at Jul 28 07-24-21.png" alt="Grupo GP" />
-          </div>
-          <div class="logo-item">
-            <img src="assets/img/logos/Screenshot at Jul 28 08-02-42.png" alt="Manaus Medicamentos" />
+            <img src="../assets/img/logos/Screenshot at Jul 28 08-02-42.png" alt="Manaus Medicamentos" />
           </div>
         </div>
       </div>
@@ -322,24 +280,23 @@
     <section class="statement statement--compact bg-light" aria-labelledby="statement-title">
       <div class="statement-split">
         <div class="statement-text rv">
-          <span class="eyebrow">Quem somos</span>
-          <h2 id="pos-title" class="grad-text">Somos a ponte entre a sua empresa e o próximo grande negócio.</h2>
-          <p>Rede de investidores, compradores e parceiros no Brasil e no exterior, e a inteligência de mercado para
-            negociar nas melhores condições. Um único objetivo: transformar oportunidade em negócio.</p>
+          <span class="eyebrow">Who We Are</span>
+          <h2 id="pos-title" class="grad-text">We are the bridge between your company and its next big move.</h2>
+          <p>A network of investors, buyers, and strategic partners in Brazil and abroad, backed by market intelligence to negotiate under optimal terms. A single goal: transforming opportunity into a closed deal.</p>
         </div>
         <figure class="photo-card photo-card--fill rv">
-          <img src="assets/img/reuniao.png" alt="Reunião de negócios" loading="lazy" width="1000" height="667" />
+          <img src="../assets/img/reuniao.png" alt="Business Meeting" loading="lazy" width="1000" height="667" />
         </figure>
       </div>
     </section>
 
-    <!-- ============ ÁREAS DE ATUAÇÃO ============ -->
+    <!-- ============ AREAS OF EXPERTISE ============ -->
     <section id="atuacao" aria-labelledby="atuacao-title">
       <div class="wrap">
         <div class="sec-head rv">
-          <span class="eyebrow">Áreas de Atuação</span>
-          <h2 id="atuacao-title">Onde geramos valor</h2>
-          <p class="sec-sub">Três frentes de atuação, um objetivo: gerar valor para a sua empresa.</p>
+          <span class="eyebrow">Areas of Expertise</span>
+          <h2 id="atuacao-title">Where We Generate Value</h2>
+          <p class="sec-sub">Three core fronts, one goal: generating value for your company.</p>
         </div>
         <div class="svc-grid">
           <article class="svc rv">
@@ -350,13 +307,13 @@
               <path d="M9 21v-6h6v6" />
             </svg>
             <h3>Capital &amp; M&amp;A</h3>
-            <p>Compra, venda e capital para o próximo salto da sua empresa.</p>
+            <p>Buying, selling, and capital for your company's next leap.</p>
             <ul class="area-panel__list" style="margin-top: 1.5rem; grid-template-columns: 1fr; max-width: 380px; margin-left: auto; margin-right: auto;">
-              <li>Compra e venda de empresas</li>
-              <li>Fusões e aquisições (M&amp;A)</li>
-              <li>Valuation e valorização de negócios</li>
-              <li>Identificação de compradores e parceiros</li>
-              <li>Joint ventures e negociações</li>
+              <li>Company buying and selling</li>
+              <li>Mergers and acquisitions (M&amp;A)</li>
+              <li>Valuation and value enhancement</li>
+              <li>Identification of buyers and partners</li>
+              <li>Joint ventures and negotiations</li>
             </ul>
           </article>
 
@@ -367,14 +324,14 @@
               <path d="M2 12h20" />
               <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
             </svg>
-            <h3>Expansão Global</h3>
-            <p>Do Brasil para o mundo, e do mundo para o Brasil.</p>
+            <h3>Global Expansion</h3>
+            <p>From Brazil to the world, and from the world to Brazil.</p>
             <ul class="area-panel__list" style="margin-top: 1.5rem; grid-template-columns: 1fr; max-width: 380px; margin-left: auto; margin-right: auto;">
-              <li>Negócios nacionais e internacionais</li>
-              <li>Internacionalização de empresas</li>
-              <li>Abertura de novos mercados</li>
-              <li>Oportunidades de novos negócios</li>
-              <li>Parcerias e alianças internacionais</li>
+              <li>Domestic and international business</li>
+              <li>Corporate internationalization</li>
+              <li>Opening new markets</li>
+              <li>New business opportunities</li>
+              <li>International partnerships &amp; strategic alliances</li>
             </ul>
           </article>
         </div>
@@ -388,8 +345,8 @@
               <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
               <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
             </svg>
-            <h3 style="text-transform: uppercase;">Conexões Estratégicas</h3>
-            <p>Conectamos a sua empresa aos principais ramos e parceiros do mercado.</p>
+            <h3 style="text-transform: uppercase;">Strategic Connections</h3>
+            <p>Connecting your company to key market sectors and strategic partners.</p>
             
             <div class="connections-row-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); margin-top: 2.5rem; width: 100%; box-sizing: border-box;">
               
@@ -400,7 +357,7 @@
                     <path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 3.2-1.3 5.5-1.3s3 1.3 5.5 1.3 3.2-1.3 5.5-1.3c1.3 0 1.9.5 2.5 1V19c-.6-.5-1.2-1-2.5-1-2.5 0-3.2 1.3-5.5 1.3-2.3 0-3-1.3-5.5-1.3-2.5 0-3.2 1.3-5.5 1.3-1.3 0-1.9-.5-2.5-1v2z"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M12 10v4"/><path d="M12 2v3"/>
                   </svg>
                 </div>
-                <h4 style="font-size: 13px; color: var(--safra-navy); margin: 0; line-height: 1.3; font-weight: 600;">Navegação e<br>Logística</h4>
+                <h4 style="font-size: 13px; color: var(--safra-navy); margin: 0; line-height: 1.3; font-weight: 600;">Navigation &amp;<br>Logistics</h4>
               </div>
 
               <!-- Item 2 -->
@@ -410,7 +367,7 @@
                     <path d="M5 18H3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3"/><path d="M8 18h8"/><path d="M16 18h5a2 2 0 0 0 2-2v-4l-3-4h-4v10"/><circle cx="6.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/>
                   </svg>
                 </div>
-                <h4 style="font-size: 13px; color: var(--safra-navy); margin: 0; line-height: 1.3; font-weight: 600;">Transporte</h4>
+                <h4 style="font-size: 13px; color: var(--safra-navy); margin: 0; line-height: 1.3; font-weight: 600;">Transportation</h4>
               </div>
 
               <!-- Item 3 -->
@@ -420,7 +377,7 @@
                     <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
                   </svg>
                 </div>
-                <h4 style="font-size: 13px; color: var(--safra-navy); margin: 0; line-height: 1.3; font-weight: 600;">Licenciamento<br>Ambiental</h4>
+                <h4 style="font-size: 13px; color: var(--safra-navy); margin: 0; line-height: 1.3; font-weight: 600;">Environmental<br>Licensing</h4>
               </div>
 
               <!-- Item 4 -->
@@ -430,7 +387,7 @@
                     <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>
                   </svg>
                 </div>
-                <h4 style="font-size: 13px; color: var(--safra-navy); margin: 0; line-height: 1.3; font-weight: 600;">Saúde e<br>Farmacêutico</h4>
+                <h4 style="font-size: 13px; color: var(--safra-navy); margin: 0; line-height: 1.3; font-weight: 600;">Health &amp;<br>Pharma</h4>
               </div>
 
               <!-- Item 5 -->
@@ -440,7 +397,7 @@
                     <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/>
                   </svg>
                 </div>
-                <h4 style="font-size: 13px; color: var(--safra-navy); margin: 0; line-height: 1.3; font-weight: 600;">Alimentício</h4>
+                <h4 style="font-size: 13px; color: var(--safra-navy); margin: 0; line-height: 1.3; font-weight: 600;">Food &amp; Beverage</h4>
               </div>
 
               <!-- Item 6 WITH HOVER TOOLTIP -->
@@ -452,17 +409,17 @@
                     <circle cx="6" cy="12" r="1.5" fill="var(--gold)"/>
                   </svg>
                 </div>
-                <h4 style="font-size: 13px; color: var(--gold); margin: 0; line-height: 1.3; font-weight: 700;">+ Diversos outros<br>segmentos</h4>
+                <h4 style="font-size: 13px; color: var(--gold); margin: 0; line-height: 1.3; font-weight: 700;">+ Various other<br>sectors</h4>
 
                 <!-- Tooltip / Toast element -->
                 <div class="segment-tooltip-box">
-                  <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); font-weight: 700; margin-bottom: 8px; border-bottom: 1px solid var(--gray-200); padding-bottom: 6px;">Outros Ramos Conectados</div>
+                  <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); font-weight: 700; margin-bottom: 8px; border-bottom: 1px solid var(--gray-200); padding-bottom: 6px;">Other Connected Sectors</div>
                   <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; color: var(--safra-navy); display: flex; flex-direction: column; gap: 8px; text-align: left;">
-                    <li style="display: flex; align-items: center; gap: 8px; font-weight: 500;"><span style="color: var(--gold); font-weight: bold;">•</span> Infraestrutura</li>
-                    <li style="display: flex; align-items: center; gap: 8px; font-weight: 500;"><span style="color: var(--gold); font-weight: bold;">•</span> Comércio Exterior</li>
-                    <li style="display: flex; align-items: center; gap: 8px; font-weight: 500;"><span style="color: var(--gold); font-weight: bold;">•</span> Terraplanagem</li>
-                    <li style="display: flex; align-items: center; gap: 8px; font-weight: 500;"><span style="color: var(--gold); font-weight: bold;">•</span> Agronegócio</li>
-                    <li style="display: flex; align-items: center; gap: 8px; font-weight: 500;"><span style="color: var(--gold); font-weight: bold;">•</span> Energia e Engenharia</li>
+                    <li style="display: flex; align-items: center; gap: 8px; font-weight: 500;"><span style="color: var(--gold); font-weight: bold;">•</span> Infrastructure</li>
+                    <li style="display: flex; align-items: center; gap: 8px; font-weight: 500;"><span style="color: var(--gold); font-weight: bold;">•</span> Foreign Trade</li>
+                    <li style="display: flex; align-items: center; gap: 8px; font-weight: 500;"><span style="color: var(--gold); font-weight: bold;">•</span> Earthmoving</li>
+                    <li style="display: flex; align-items: center; gap: 8px; font-weight: 500;"><span style="color: var(--gold); font-weight: bold;">•</span> Agribusiness</li>
+                    <li style="display: flex; align-items: center; gap: 8px; font-weight: 500;"><span style="color: var(--gold); font-weight: bold;">•</span> Energy &amp; Engineering</li>
                   </ul>
                 </div>
               </div>
@@ -477,9 +434,9 @@
     <section id="servicos" class="bg-light" aria-labelledby="servicos-title">
       <div class="wrap">
         <div class="sec-head rv">
-          <span class="eyebrow">Serviços</span>
-          <h2 id="svc-title">Como aceleramos o seu negócio</h2>
-          <p class="sec-sub">Atuação de ponta a ponta, do diagnóstico ao fechamento.</p>
+          <span class="eyebrow">Services</span>
+          <h2 id="svc-title">How We Accelerate Your Business</h2>
+          <p class="sec-sub">End-to-end advisory, from diagnosis to closing.</p>
         </div>
 
         <div class="svc-grid">
@@ -491,8 +448,8 @@
               <path d="M21 3l-7 7" />
               <path d="M3 21l7-7" />
             </svg>
-            <h3>Venda e aquisição de empresas</h3>
-            <p>Da avaliação ao fechamento, com sigilo absoluto e você no controle de cada etapa.</p>
+            <h3>Company Sales &amp; Acquisitions</h3>
+            <p>From valuation to closing, with absolute confidentiality and you in full control at every stage.</p>
           </article>
 
           <article class="svc rv">
@@ -501,11 +458,9 @@
               <path d="M3 17l6-6 4 4 8-8" />
               <path d="M21 7v6h-6" />
             </svg>
-            <h3>Consultoria para venda</h3>
-            <p>Empresa preparada vale mais, e vende mais rápido. Preparamos a sua para o mercado.</p>
+            <h3>Advisory for Sale Preparation</h3>
+            <p>A well-prepared company is worth more and sells faster. We prepare yours for the market.</p>
           </article>
-
-
 
           <article class="svc rv">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
@@ -514,17 +469,15 @@
               <path d="M2 12h20" />
               <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
             </svg>
-            <h3>Negócios internacionais</h3>
-            <p>Do Brasil para o mundo, e do mundo para o Brasil, com estrutura e segurança.</p>
+            <h3>International Business</h3>
+            <p>From Brazil to the world, and from the world to Brazil, with structure and security.</p>
           </article>
-
-
         </div>
 
         <div class="sec-cta rv">
           <a class="btn btn-ghost"
-            href="https://wa.me/5592984622007?text=Ol%C3%A1,%20vim%20da%20landing%20page%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20intermedia%C3%A7%C3%A3o%20de%20neg%C3%B3cios."
-            target="_blank" rel="noopener noreferrer">Fale conosco</a>
+            href="https://wa.me/5592984622007?text=Hello,%20I%20came%20from%20the%20landing%20page%20and%20would%20like%20more%20information%20about%20business%20advisory%20and%20M%26A."
+            target="_blank" rel="noopener noreferrer">Contact Us</a>
         </div>
       </div>
     </section>
@@ -532,17 +485,15 @@
     <!-- ============ DIFFERENTIALS ============ -->
     <section id="diferenciais" aria-labelledby="diff-title" class="diff-split-section">
       <div class="diff-split">
-        <!-- Left: full-bleed image -->
         <figure class="photo-card photo-card--fill photo-card--left rv">
-          <img src="assets/img/handshake2.jpg" alt="Aperto de mão simbolizando fechamento de negócio" loading="lazy"
+          <img src="../assets/img/handshake2.jpg" alt="Handshake symbolizing business deal closure" loading="lazy"
             width="1000" height="667" />
         </figure>
-        <!-- Right: header + 2x2 cards -->
         <div class="diff-split__content rv">
           <div class="diff-split__head">
-            <span class="eyebrow">Diferenciais</span>
-            <h2 id="diff-title">Por que nos confiam as decisões mais importantes</h2>
-            <p class="sec-sub">Discrição, rede qualificada e foco total no fechamento.</p>
+            <span class="eyebrow">Why Us</span>
+            <h2 id="diff-title">Why the most critical decisions are entrusted to us</h2>
+            <p class="sec-sub">Discretion, qualified network, and total focus on closing.</p>
           </div>
           <div class="diff-cards">
             <div class="diff rv">
@@ -552,8 +503,8 @@
                 <path d="M7 11V7a5 5 0 0 1 10 0v4" />
               </svg>
               <div>
-                <h3>Sigilo<br>absoluto</h3>
-                <p>Nenhuma informação sua chega ao mercado sem a sua autorização.</p>
+                <h3>Absolute<br>confidentiality</h3>
+                <p>No information about your company reaches the market without your explicit consent.</p>
               </div>
             </div>
             <div class="diff rv">
@@ -566,8 +517,8 @@
                 <path d="M9 6h6M6 9v6M18 9v6M9 18h6" />
               </svg>
               <div>
-                <h3>Rede nacional<br>e internacional</h3>
-                <p>Acesso direto a investidores, compradores e parceiros qualificados.</p>
+                <h3>Global &amp; national<br>network</h3>
+                <p>Direct access to qualified investors, buyers, and strategic partners worldwide.</p>
               </div>
             </div>
             <div class="diff rv">
@@ -580,8 +531,8 @@
                 <path d="M17 21v-6" />
               </svg>
               <div>
-                <h3>Negociação<br>estratégica</h3>
-                <p>Sentamos à mesa por você, para proteger seu valor e fechar melhor.</p>
+                <h3>Strategic<br>negotiation</h3>
+                <p>We sit at the table on your behalf to protect your value and close under optimal terms.</p>
               </div>
             </div>
             <div class="diff rv">
@@ -591,8 +542,8 @@
                 <path d="M22 4L12 14.01l-3-3" />
               </svg>
               <div>
-                <h3>Foco em<br>resultado</h3>
-                <p>Não entregamos apenas relatórios. Entregamos o seu negócio fechado.</p>
+                <h3>Result-<br>oriented</h3>
+                <p>We don't just deliver reports. We deliver your closed deal.</p>
               </div>
             </div>
           </div>
@@ -604,30 +555,30 @@
     <section class="process bg-light" id="processo" aria-labelledby="how-title">
       <div class="wrap">
         <div class="sec-head rv">
-          <span class="eyebrow">Processo</span>
-          <h2 id="how-title">O caminho certo para seu negócio bem sucedido</h2>
-          <p class="sec-sub">Quatro etapas claras, sem surpresas.</p>
+          <span class="eyebrow">Process</span>
+          <h2 id="how-title">The right path to your successful deal</h2>
+          <p class="sec-sub">Four clear steps, zero surprises.</p>
         </div>
         <ol class="timeline rv">
           <li class="tl-step rv">
             <span class="dot">01</span>
-            <h3>Conversa estratégica</h3>
-            <p>Seu objetivo, seu momento e o que está em jogo. Confidencial.</p>
+            <h3>Strategic Conversation</h3>
+            <p>Your goals, timing, and what is at stake. Strictly confidential.</p>
           </li>
           <li class="tl-step rv">
             <span class="dot">02</span>
-            <h3>Diagnóstico</h3>
-            <p>Avaliamos a operação, definimos valor e montamos a estratégia.</p>
+            <h3>Diagnosis &amp; Valuation</h3>
+            <p>We evaluate the operation, define value, and build the strategy.</p>
           </li>
           <li class="tl-step rv">
             <span class="dot">03</span>
-            <h3>Conexão e negociação</h3>
-            <p>Ativamos a rede e conduzimos a negociação por você.</p>
+            <h3>Connection &amp; Negotiation</h3>
+            <p>We activate our network and lead negotiations for you.</p>
           </li>
           <li class="tl-step rv">
             <span class="dot">04</span>
-            <h3>Fechamento</h3>
-            <p>Estruturamos o fechamento e seguimos ao seu lado até o fim.</p>
+            <h3>Closing</h3>
+            <p>We structure the closing and stand by your side until completion.</p>
           </li>
         </ol>
       </div>
@@ -636,15 +587,14 @@
     <!-- ============ CTA FINAL ============ -->
     <div class="cta-final" id="contato">
       <div class="cta-card rv">
-        <span class="eyebrow">Vamos conversar</span>
-        <h2 class="grad-text">A Chave do Seu Negócio Está Aqui.</h2>
-        <p class="sub">Fale com a nossa equipe e descubra, sem compromisso, como acelerar o crescimento da sua empresa.
-        </p>
+        <span class="eyebrow">Let's Talk</span>
+        <h2 class="grad-text">The Key to Your Business Deal is Here.</h2>
+        <p class="sub">Speak with our team and discover, with no commitment, how to accelerate your company's growth.</p>
         <a class="btn btn-primary"
-          href="https://wa.me/5592984622007?text=Ol%C3%A1,%20vim%20da%20landing%20page%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20intermedia%C3%A7%C3%A3o%20de%20neg%C3%B3cios."
-          target="_blank" rel="noopener noreferrer">Entrar em contato <span class="arrow"
+          href="https://wa.me/5592984622007?text=Hello,%20I%20came%20from%20the%20landing%20page%20and%20would%20like%20more%20information%20about%20business%20advisory%20and%20M%26A."
+          target="_blank" rel="noopener noreferrer">Get in Touch <span class="arrow"
             aria-hidden="true">→</span></a>
-        <p class="hero-support">Atendimento confidencial · Análise inicial gratuita</p>
+        <p class="hero-support">Confidential support · Free initial analysis</p>
       </div>
     </div>
 
@@ -656,39 +606,38 @@
       <div class="foot-grid">
         <div class="foot-brand">
           <a class="brand" href="#topo">Davi M&amp;A</a>
-          <p>Transformando oportunidades em grandes negócios. Sigilo, estratégia e resultado em cada operação no Brasil
-            e no mundo.</p>
+          <p>Transforming opportunities into major business deals. Confidentiality, strategy, and results in every operation in Brazil and worldwide.</p>
         </div>
         <div class="foot-col">
-          <h3>Empresa</h3>
+          <h3>Company</h3>
           <ul>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#diferenciais">Diferenciais</a></li>
-            <li><a href="#processo">Processo</a></li>
+            <li><a href="#servicos">Services</a></li>
+            <li><a href="#diferenciais">Why Us</a></li>
+            <li><a href="#processo">Process</a></li>
           </ul>
         </div>
         <div class="foot-col">
-          <h3>Contato</h3>
+          <h3>Contact</h3>
           <ul>
             <li><a
-                href="https://wa.me/5592984622007?text=Ol%C3%A1,%20vim%20da%20landing%20page%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20intermedia%C3%A7%C3%A3o%20de%20neg%C3%B3cios."
+                href="https://wa.me/5592984622007?text=Hello,%20I%20came%20from%20the%20landing%20page%20and%20would%20like%20more%20information%20about%20business%20advisory%20and%20M%26A."
                 target="_blank" rel="noopener noreferrer">WhatsApp: (92) 98462-2007</a></li>
             <li><a href="mailto:davi.diretoria@distribuidoramanaus.com.br">davi.diretoria@distribuidoramanaus.com.br</a>
             </li>
           </ul>
         </div>
         <div class="foot-col">
-          <h3>Endereço</h3>
+          <h3>Address</h3>
           <p
             style="font-size: 14px; color: var(--gray-300); line-height: 1.6; margin: 0; font-family: 'Open Sans', sans-serif;">
             Av. Bom Jesus, 115<br>
             Colônia Terra Nova - Sala 01<br>
-            Manaus - AM
+            Manaus - AM - Brazil
           </p>
         </div>
       </div>
       <div class="foot-bottom">
-        <span>© 2026 Davi M&amp;A. Todos os direitos reservados.</span>
+        <span>© 2026 Davi M&amp;A. All rights reserved.</span>
         <span class="mono">Manaus - AM</span>
       </div>
     </div>
@@ -697,11 +646,11 @@
   <!-- Floating WhatsApp Button -->
   <div class="whatsapp-float" id="whatsappFloat">
     <div class="whatsapp-tooltip" id="whatsappTooltip">
-      <span>Tem alguma dúvida? Entre em contato conosco.</span>
-      <button class="whatsapp-tooltip__close" id="closeTooltip" aria-label="Fechar mensagem">&times;</button>
+      <span>Have any questions? Contact us on WhatsApp.</span>
+      <button class="whatsapp-tooltip__close" id="closeTooltip" aria-label="Close message">&times;</button>
     </div>
-    <a href="https://wa.me/5592984622007?text=Ol%C3%A1,%20vim%20da%20landing%20page%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20intermedia%C3%A7%C3%A3o%20de%20neg%C3%B3cios."
-      target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Falar no WhatsApp">
+    <a href="https://wa.me/5592984622007?text=Hello,%20I%20came%20from%20the%20landing%20page%20and%20would%20like%20more%20information%20about%20business%20advisory%20and%20M%26A."
+      target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Chat on WhatsApp">
       <svg viewBox="0 0 16 16" fill="currentColor">
         <path
           d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.153.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
@@ -710,7 +659,7 @@
   </div>
 
   <!-- Scripts -->
-  <script type="module" src="assets/js/script.js"></script>
+  <script type="module" src="../assets/js/script.js"></script>
 </body>
 
 </html>
