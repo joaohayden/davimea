@@ -349,21 +349,52 @@
     }
 
     tooltip.addEventListener('click', function () {
-      window.open('https://wa.me/5592984622007?text=Ol%C3%A1,%20vim%20da%20landing%20page%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20intermedia%C3%A7%C3%B3o%20de%20neg%C3%B3cios.', '_blank');
+      window.open('https://wa.me/5592984622007?text=Ol%C3%A1,%20vim%20da%20landing%20page%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20intermedia%C3%A7%C3%A3o%20de%20neg%C3%B3cios.', '_blank');
     });
   }
 
-  /* ── Language Pill Toggle ── */
-  function initLangPill() {
-    var btns = document.querySelectorAll('.lang-pill-btn');
-    if (btns.length === 0) return;
+  /* ── Country & Language Selector (i18n) ── */
+  function initCountryLangSelector() {
+    var selector = document.getElementById('countryLangSelector');
+    var btn = document.getElementById('countryLangBtn');
+    var dropdown = document.getElementById('countryLangDropdown');
+    if (!selector || !btn || !dropdown) return;
 
-    btns.forEach(function (btn) {
-      btn.addEventListener('click', function (e) {
-        e.preventDefault();
-        if (this.classList.contains('active')) return;
-        var url = this.getAttribute('data-url');
-        window.location.href = url;
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isOpen = selector.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!selector.contains(e.target)) {
+        selector.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    var options = dropdown.querySelectorAll('.country-opt');
+    options.forEach(function (opt) {
+      opt.addEventListener('click', function () {
+        options.forEach(function (o) { o.classList.remove('active'); });
+        opt.classList.add('active');
+
+        var flag = opt.getAttribute('data-flag');
+        var country = opt.getAttribute('data-country');
+        var lang = opt.getAttribute('data-lang');
+
+        var currFlag = btn.querySelector('.curr-flag');
+        var currName = btn.querySelector('.curr-name');
+        if (currFlag) currFlag.textContent = flag;
+        if (currName) currName.textContent = country;
+
+        selector.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+
+        // Custom event hook for future translations
+        document.dispatchEvent(new CustomEvent('countryLangChange', {
+          detail: { flag: flag, country: country, lang: lang }
+        }));
       });
     });
   }
@@ -378,7 +409,7 @@
     initHeroVideo();
     initAreaTabs();
     initWhatsAppTooltip();
-    initLangPill();
+    initCountryLangSelector();
   });
 
 })();
