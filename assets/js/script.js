@@ -385,7 +385,7 @@
 
         var currFlag = btn.querySelector('.curr-flag');
         var currName = btn.querySelector('.curr-name');
-        if (currFlag) currFlag.textContent = flag;
+        if (currFlag) currFlag.innerHTML = flag;
         if (currName) currName.textContent = country;
 
         selector.classList.remove('open');

@@ -25,12 +25,7 @@
   <!-- Favicon -->
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
-    rel="stylesheet" />
+  <!-- Fonts import moved to style.css -->
 
   <!-- Styles -->
   <link rel="stylesheet" href="../assets/css/style.css?v=5" />
@@ -45,7 +40,7 @@
         <a class="brand" href="#topo" style="margin: 0;">DEX negócios</a>
         <div class="country-lang-selector" id="countryLangSelector">
           <button class="country-lang-btn" id="countryLangBtn" type="button" aria-haspopup="true" aria-expanded="false">
-            <span class="curr-flag">🇪🇸</span>
+            <span class="curr-flag"><img src='https://flagcdn.com/w20/es.png' srcset='https://flagcdn.com/w40/es.png 2x' alt='ES' style='width: 20px; border-radius: 2px; vertical-align: middle;'></span>
             <span class="curr-name">España</span>
             <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="6 9 12 15 18 9"></polyline>
@@ -53,24 +48,24 @@
           </button>
           
           <div class="country-lang-dropdown" id="countryLangDropdown">
-            <a class="country-opt" href="../index.html" data-flag="🇧🇷" data-country="Brasil" data-lang="pt" style="text-decoration: none;">
-              <span class="opt-flag">🇧🇷</span>
+            <a class="country-opt" href="../index.html" data-flag="<img src='https://flagcdn.com/w20/br.png' srcset='https://flagcdn.com/w40/br.png 2x' alt='BR' style='width: 20px; border-radius: 2px; vertical-align: middle;'>" data-country="Brasil" data-lang="pt" style="text-decoration: none;">
+              <span class="opt-flag"><img src='https://flagcdn.com/w20/br.png' srcset='https://flagcdn.com/w40/br.png 2x' alt='BR' style='width: 20px; border-radius: 2px; vertical-align: middle;'></span>
               <div class="opt-text">
                 <strong>Brasil</strong>
                 <small>Português</small>
               </div>
             </a>
 
-            <a class="country-opt" href="../en/index.html" data-flag="🇺🇸" data-country="United States" data-lang="en" style="text-decoration: none;">
-              <span class="opt-flag">🇺🇸</span>
+            <a class="country-opt" href="../en/index.html" data-flag="<img src='https://flagcdn.com/w20/us.png' srcset='https://flagcdn.com/w40/us.png 2x' alt='US' style='width: 20px; border-radius: 2px; vertical-align: middle;'>" data-country="United States" data-lang="en" style="text-decoration: none;">
+              <span class="opt-flag"><img src='https://flagcdn.com/w20/us.png' srcset='https://flagcdn.com/w40/us.png 2x' alt='US' style='width: 20px; border-radius: 2px; vertical-align: middle;'></span>
               <div class="opt-text">
                 <strong>United States</strong>
                 <small>English</small>
               </div>
             </a>
 
-            <a class="country-opt active" href="index.html" data-flag="🇪🇸" data-country="España" data-lang="es" style="text-decoration: none;">
-              <span class="opt-flag">🇪🇸</span>
+            <a class="country-opt active" href="index.html" data-flag="<img src='https://flagcdn.com/w20/es.png' srcset='https://flagcdn.com/w40/es.png 2x' alt='ES' style='width: 20px; border-radius: 2px; vertical-align: middle;'>" data-country="España" data-lang="es" style="text-decoration: none;">
+              <span class="opt-flag"><img src='https://flagcdn.com/w20/es.png' srcset='https://flagcdn.com/w40/es.png 2x' alt='ES' style='width: 20px; border-radius: 2px; vertical-align: middle;'></span>
               <div class="opt-text">
                 <strong>España</strong>
                 <small>Español</small>
