@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dexnegocios.com.br/sitemap.xml
