@@ -2288,11 +2288,11 @@ footer {
   .timeline::before {
     content: '';
     position: absolute;
-    left: 20px;
+    left: 19px;
     top: 20px;
-    bottom: 20px;
+    bottom: 30px;
     width: 2px;
-    background: linear-gradient(to bottom, var(--gold) 0%, rgba(198,169,113,0.12) 100%);
+    background: linear-gradient(to bottom, var(--gold) 0%, rgba(198,169,113,0.1) 100%);
     border-radius: 2px;
     z-index: 0;
   }
@@ -2302,17 +2302,18 @@ footer {
     transition-delay: 0s;
   }
 
-  /* Each step: row layout — dot left, card right */
+  /* Each step: Grid layout — dot left, title/text right */
   .tl-step {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: flex-start !important;
-    gap: 16px !important;
+    display: grid !important;
+    grid-template-columns: 40px 1fr !important;
+    grid-template-rows: auto auto !important;
+    column-gap: 20px !important;
+    row-gap: 4px !important;
     background: none !important;
     border: none !important;
     border-radius: 0 !important;
     box-shadow: none !important;
-    padding: 0 0 20px 0 !important;
+    padding: 0 0 36px 0 !important;
     overflow: visible !important;
     position: relative;
     z-index: 1;
@@ -2330,8 +2331,9 @@ footer {
   /* Gold circle with step number */
   .tl-step .dot,
   .bg-light .tl-step .dot {
+    grid-column: 1 !important;
+    grid-row: 1 / span 2 !important;
     position: static !important;
-    flex-shrink: 0 !important;
     width: 40px !important;
     height: 40px !important;
     border-radius: 50% !important;
@@ -2341,42 +2343,35 @@ footer {
     align-items: center !important;
     justify-content: center !important;
     font-family: 'IBM Plex Mono', monospace !important;
-    font-size: 11px !important;
+    font-size: 13px !important;
     font-weight: 700 !important;
-    letter-spacing: 0.04em !important;
     color: var(--gold) !important;
-    opacity: 1 !important;
     margin: 0 !important;
-    box-shadow: 0 0 0 4px rgba(198,169,113,0.12) !important;
-    transition: box-shadow 0.4s ease !important;
+    box-shadow: 0 0 0 5px rgba(198,169,113,0.12) !important;
     z-index: 2;
   }
 
   .tl-step.in .dot,
   .bg-light .tl-step.in .dot {
-    box-shadow: 0 0 0 6px rgba(198,169,113,0.2), 0 0 20px rgba(198,169,113,0.35) !important;
-  }
-
-  /* Content card */
-  .tl-step > div {
-    flex: 1;
-    background: #ffffff;
-    border-radius: 14px;
-    padding: 16px 18px;
-    box-shadow: 0 2px 16px rgba(10, 29, 56, 0.08);
-    border: 1px solid rgba(10, 29, 56, 0.06);
+    box-shadow: 0 0 0 6px rgba(198,169,113,0.2), 0 0 20px rgba(198,169,113,0.3) !important;
   }
 
   .tl-step h3 {
-    margin: 0 0 6px 0 !important;
-    font-size: 15px !important;
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    margin: 0 !important;
+    font-size: 17px !important;
     font-weight: 700 !important;
     color: var(--safra-navy) !important;
+    align-self: center !important;
+    padding-top: 2px !important;
   }
 
   .tl-step p {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
     margin: 0 !important;
-    font-size: 13.5px !important;
+    font-size: 15px !important;
     color: var(--gray-600) !important;
     line-height: 1.55 !important;
   }
