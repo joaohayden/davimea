@@ -2658,3 +2658,37 @@ footer {
 .country-opt.active {
   background: rgba(212, 175, 55, 0.08);
 }
+
+/* ============================================
+   MOBILE TWEAKS & SPECIFIC OVERRIDES
+   ============================================ */
+
+/* 1. Bullet points mais escuros no 'Onde geramos valor' */
+.area-panel__list li {
+  color: var(--safra-navy) !important;
+  font-weight: 500;
+}
+
+/* 2. Quebras de linha (br) apenas no desktop */
+.br-desktop {
+  display: block;
+}
+
+/* Ajustes apenas para Mobile */
+@media (max-width: 768px) {
+  .br-desktop {
+    display: inline;
+  }
+
+  /* 3. Subir a setinha e centralizar o versículo para não sobreporem */
+  .hero-scroll-indicator {
+    bottom: 54px;
+  }
+  .hero-verse {
+    left: 0;
+    width: 100%;
+    bottom: 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+}
