@@ -2277,7 +2277,7 @@ footer {
   .timeline {
     display: flex !important;
     flex-direction: column !important;
-    gap: 0 !important;
+    gap: 12px !important; /* Espacinho entre as divs */
     padding: 0 16px 0 28px !important;
     margin: 0 !important;
     border-left: none !important;
@@ -2287,27 +2287,17 @@ footer {
     display: none !important;
   }
 
-  /* Each step becomes a stacked card */
+  /* Each step becomes a spaced card */
   .tl-step {
     display: block !important;
-    background: rgba(10, 29, 56, 0.02) !important;
-    border: 1px solid rgba(10, 29, 56, 0.08) !important;
-    border-bottom: none !important;
-    border-radius: 0 !important;
-    padding: 18px 18px 18px 36px !important;
+    background: var(--safra-navy) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 16px 16px 16px 36px !important;
     position: relative;
-    box-shadow: none !important;
+    box-shadow: 0 4px 12px rgba(10, 29, 56, 0.1) !important;
     margin: 0 !important;
     overflow: visible !important;
-  }
-
-  .tl-step:first-child {
-    border-radius: 6px 6px 0 0 !important;
-  }
-
-  .tl-step:last-child {
-    border-radius: 0 0 6px 6px !important;
-    border-bottom: 1px solid rgba(10, 29, 56, 0.08) !important;
   }
 
   /* Hide desktop lines */
@@ -2348,13 +2338,13 @@ footer {
     margin: 0 0 4px 0 !important;
     font-size: 16px !important;
     font-weight: 700 !important;
-    color: var(--safra-navy) !important;
+    color: var(--white) !important;
   }
 
   .tl-step p {
     margin: 0 !important;
     font-size: 14.5px !important;
-    color: var(--gray-600) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
     line-height: 1.45 !important;
   }
 
