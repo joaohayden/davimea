@@ -2273,123 +2273,105 @@ footer {
     flex-shrink: 0;
   }
 
-  /* Mobile Process: Beautiful Vertical Roadmap */
+  /* Mobile Process: Stacked Cards like Web */
   .timeline {
-    border-left: none !important;
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-    gap: 0 !important;
     display: flex !important;
     flex-direction: column !important;
-    position: relative;
+    gap: 0 !important;
+    padding: 0 16px 0 28px !important;
+    margin: 0 !important;
+    border-left: none !important;
   }
-
-  /* Vertical gold connector line */
+  
   .timeline::before {
-    content: '';
-    position: absolute;
-    left: 19px;
-    top: 20px;
-    bottom: 30px;
-    width: 2px;
-    background: linear-gradient(to bottom, var(--gold) 0%, rgba(198,169,113,0.1) 100%);
-    border-radius: 2px;
-    z-index: 0;
-  }
-
-  /* Remove staggered delays on mobile */
-  .timeline .rv:nth-child(n) {
-    transition-delay: 0s;
-  }
-
-  /* Each step: Grid layout — dot left, title/text right */
-  .tl-step {
-    display: grid !important;
-    grid-template-columns: 40px 1fr !important;
-    grid-template-rows: auto auto !important;
-    column-gap: 20px !important;
-    row-gap: 4px !important;
-    background: none !important;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    padding: 0 0 36px 0 !important;
-    overflow: visible !important;
-    position: relative;
-    z-index: 1;
-  }
-
-  .tl-step:last-child {
-    padding-bottom: 0 !important;
-  }
-
-  /* Hide top gradient line */
-  .tl-step::before {
     display: none !important;
   }
 
-  /* Gold circle with step number */
+  /* Each step becomes a stacked card */
+  .tl-step {
+    display: block !important;
+    background: rgba(10, 29, 56, 0.02) !important;
+    border: 1px solid rgba(10, 29, 56, 0.08) !important;
+    border-bottom: none !important;
+    border-radius: 0 !important;
+    padding: 18px 18px 18px 36px !important;
+    position: relative;
+    box-shadow: none !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+
+  .tl-step:first-child {
+    border-radius: 6px 6px 0 0 !important;
+  }
+
+  .tl-step:last-child {
+    border-radius: 0 0 6px 6px !important;
+    border-bottom: 1px solid rgba(10, 29, 56, 0.08) !important;
+  }
+
+  /* Hide desktop lines */
+  .tl-step::before, .tl-step::after {
+    display: none !important;
+  }
+
+  /* Circle overlapping the left border */
   .tl-step .dot,
   .bg-light .tl-step .dot {
-    grid-column: 1 !important;
-    grid-row: 1 / span 2 !important;
-    position: static !important;
-    width: 40px !important;
-    height: 40px !important;
-    border-radius: 50% !important;
+    position: absolute !important;
+    left: -18px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 36px !important;
+    height: 36px !important;
     background: var(--safra-navy) !important;
-    border: 2px solid var(--gold) !important;
+    border: 1.5px solid var(--gold) !important;
+    border-radius: 50% !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    color: var(--gold) !important;
     font-family: 'IBM Plex Mono', monospace !important;
     font-size: 13px !important;
     font-weight: 700 !important;
-    color: var(--gold) !important;
+    box-shadow: 0 0 0 5px rgba(198,169,113,0.15) !important;
     margin: 0 !important;
-    box-shadow: 0 0 0 5px rgba(198,169,113,0.12) !important;
     z-index: 2;
   }
-
+  
   .tl-step.in .dot,
   .bg-light .tl-step.in .dot {
-    box-shadow: 0 0 0 6px rgba(198,169,113,0.2), 0 0 20px rgba(198,169,113,0.3) !important;
+    box-shadow: 0 0 0 6px rgba(198,169,113,0.2), 0 0 15px rgba(198,169,113,0.3) !important;
   }
 
   .tl-step h3 {
-    grid-column: 2 !important;
-    grid-row: 1 !important;
-    margin: 0 !important;
-    font-size: 17px !important;
+    margin: 0 0 4px 0 !important;
+    font-size: 16px !important;
     font-weight: 700 !important;
     color: var(--safra-navy) !important;
-    align-self: center !important;
-    padding-top: 2px !important;
   }
 
   .tl-step p {
-    grid-column: 2 !important;
-    grid-row: 2 !important;
     margin: 0 !important;
-    font-size: 15px !important;
+    font-size: 14.5px !important;
     color: var(--gray-600) !important;
-    line-height: 1.55 !important;
+    line-height: 1.45 !important;
   }
 
-  /* Slide in from right */
+  /* Slide in from right animation */
   .tl-step.rv {
     opacity: 0;
-    transform: translateX(24px);
+    transform: translateX(40px);
   }
 
   .tl-step.rv.in {
     opacity: 1;
-    transform: none;
+    transform: translateX(0);
   }
 
-  /* Disable the border-drawing ::after on mobile */
-  .tl-step::after {
-    display: none !important;
+  /* Remove staggered delays so they animate instantly when scrolled into view */
+  .timeline .rv:nth-child(n) {
+    transition-delay: 0s;
   }
 }
 
