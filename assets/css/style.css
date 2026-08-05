@@ -392,8 +392,15 @@ header {
 }
 
 @media (min-width: 860px) {
+  .nav {
+    position: relative;
+  }
+  
   .nav-links {
     display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .nav__hamburger {
