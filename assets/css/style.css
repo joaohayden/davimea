@@ -1566,11 +1566,12 @@ footer {
 }
 
 .ssl-seal__logo {
-  width: 110px;
-  height: auto;
+  height: 50px;
+  width: auto;
   background: #fff;
   border-radius: 6px;
   padding: 6px 12px;
+  object-fit: contain;
 }
 
 .ssl-seal__label {
